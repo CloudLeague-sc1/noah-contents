@@ -35,7 +35,13 @@
      <xsd:documentation>Title of lesson. e.g. "What is Typhoon?"</xsd:documentation>
    </xsd:annotation>
     </xsd:element>
-   <xsd:element name="page" minOccurs="1" maxOccurs="unbounded" type="Page"/>
+
+    
+     <xsd:choice minOccurs="1" maxOccurs="unbounded">
+      <xsd:element name="page" type="Page"/>
+      <xsd:element name="quiz" type="Quiz"/>
+     </xsd:choice>
+
    <xsd:element name="summary" type="list">
     <xsd:annotation>
      <xsd:documentation>Summary of content. It'll be renderd as a bullets.</xsd:documentation>
@@ -47,13 +53,6 @@
 
  <!-- Page Type definitions -->
 <xsd:complexType name="Page">
- <xsd:choice>
-  <xsd:element name="page" type="ContentPage"/>
-  <xsd:element name="page" type="QuizPage"/>
- </xsd:choice>
-</xsd:complexType>
-
-<xsd:complexType name="ContentPage">
  <xsd:annotation>
   <xsd:documentation>Learning content style page which includes text ,one or less media content, and an annotation.</xsd:documentation>
 </xsd:annotation>
@@ -76,7 +75,7 @@
   </xsd:sequence>
  </xsd:complexType>
 
- <xsd:complexType name="QuizPage">
+ <xsd:complexType name="Quiz">
   <xsd:annotation>
      <xsd:documentation>Quiz style page.</xsd:documentation>
    </xsd:annotation>
@@ -162,7 +161,7 @@
  </xsd:annotation>
  <xsd:sequence>
   <xsd:element name="text" type="MultilingualText"/>
-  <xsd:element name="after-answer-comment" type="MultilingualText">
+  <xsd:element name="comment" type="MultilingualText">
    <xsd:annotation>
     <xsd:documentation>Comment text that will appear when this option has been chosen.</xsd:documentation>
    </xsd:annotation>
@@ -183,17 +182,10 @@
  </xsd:annotation>
 
  <xsd:sequence>
-  <xsd:element name="reference" type="Reference" minOccurs="1" maxOccurs="unbounded"/>
- </xsd:sequence>
-</xsd:complexType>
-
-<xsd:complexType name="Reference">
- <xsd:annotation>
-  <xsd:documentation>A reference item.</xsd:documentation>
- </xsd:annotation>
- <xsd:choice>
+  <xsd:choice minOccurs="1" maxOccurs="unbounded">
    <xsd:element name="web" type="WebResource"/>
  </xsd:choice>
+ </xsd:sequence>
 </xsd:complexType>
 
 <!-- Various Reference types -->
