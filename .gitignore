@@ -13,3 +13,4 @@ node_modules
 generated
 
 content_toolkit/dist
+content_toolkit/src/types/**/*.guard.ts
