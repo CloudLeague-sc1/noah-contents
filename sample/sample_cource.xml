@@ -183,10 +183,10 @@
     </question>
     <select>
       <option> 
-       <text> 
+       <label> 
         <ja>1</ja>
         <en>1</en>
-       </text>
+       </label>
        <comment>
         <ja>おっと。凡ミスであることを祈っています。答えは2ですね。このように、選択肢ごとにメッセージを書くことができます。
         </ja>
@@ -194,10 +194,10 @@
        </comment>
       </option>
       <option correct="true"> 
-       <text> 
+       <label> 
         <ja>2</ja>
         <en>2</en>
-       </text> 
+       </label> 
        <comment>
         <ja>そうですね。正解です。このように、選択肢ごとにメッセージを書くことができます。</ja>
         <en>That's right. You can leave a comment for each options like this. </en>
@@ -213,20 +213,20 @@
     </question>
     <select>
       <option> 
-       <text> 
+       <label> 
         <ja>1</ja>
         <en>1</en>
-       </text>
+       </label>
        <comment>
         <ja>正しく誤答を選べましたね。コメントは選択肢ごとに変化します。</ja>
         <en>You've correctly chosen the wrong answer :). The comment changes depending on the options.</en>
        </comment>
       </option>
       <option correct="true"> 
-       <text> 
+       <label> 
         <ja>2</ja>
         <en>2</en>
-       </text> 
+       </label> 
        <comment>
         <ja>誤答を選んで欲しかったのですが...まあ、正解です。</ja>
         <en>I asked you to choose wrong answe... but yes, that's correct. </en>

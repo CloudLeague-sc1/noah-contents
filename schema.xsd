@@ -160,7 +160,7 @@
   <xsd:documentation>Multiple-choice quiz option.</xsd:documentation>
  </xsd:annotation>
  <xsd:sequence>
-  <xsd:element name="text" type="MultilingualText"/>
+  <xsd:element name="label" type="MultilingualText"/>
   <xsd:element name="comment" type="MultilingualText">
    <xsd:annotation>
     <xsd:documentation>Comment text that will appear when this option has been chosen.</xsd:documentation>
