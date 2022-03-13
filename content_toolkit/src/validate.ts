@@ -45,7 +45,7 @@ const process_files = async () => {
     printInfo(`Processing file ${underlinedFilename}`);
 
     const targetDocument = path.resolve(process.cwd(), file);
-    const xsdPath = path.resolve(__dirname, '../schema.xsd');
+    const xsdPath = path.resolve(__dirname, '../../schema.xsd');
     await validateXMLAsync({ file: targetDocument }, xsdPath)
       .then((result) => {
         if (result.valid) {
