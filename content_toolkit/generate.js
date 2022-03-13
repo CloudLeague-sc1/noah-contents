@@ -12,9 +12,12 @@ const files = process.argv.slice(3);
 
 for (let file of files){
  const XMLStr = fs.readFileSync(file, 'utf8');
- const parser = new XMLParser();
- let jObj = parser.parse(XMLStr);
 
- delete jObj['?xml'];
+ const options = {
+    ignoreDeclaration: true,
+};
+
+ const parser = new XMLParser(options);
+ let jObj = parser.parse(XMLStr);
  fs.writeFileSync(path.resolve(process.cwd(),dest,`${path.basename(file,'.xml')}.json`),JSON.stringify(jObj,null,2));
 }
