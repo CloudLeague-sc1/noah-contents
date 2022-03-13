@@ -11,3 +11,5 @@ Cargo.lock
 
 node_modules
 generated
+
+content_toolkit/dist
