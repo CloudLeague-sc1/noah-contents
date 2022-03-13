@@ -7,6 +7,8 @@ if (process.argv.length < 4) {
   process.exit(1);
 }
 
+import simplifyOputput from './XMLTypeConversion';
+
 const dest = process.argv[2];
 const files = process.argv.slice(3);
 
@@ -16,11 +18,14 @@ for (const file of files) {
   const options = {
     ignoreDeclaration: true,
     preserveOrder: true,
+    ignoreAttributes: false,
+    attributeNamePrefix: '',
+    parseAttributeValue: true,
   };
 
   const parser = new XMLParser(options);
-  const jObj = parser.parse(XMLStr)[0].cource;
-  const result = { cource: {} };
+  const jObj = parser.parse(XMLStr);
+  const result = simplifyOputput(jObj);
 
   fs.writeFileSync(
     path.resolve(process.cwd(), dest, `${path.basename(file, '.xml')}.json`),
