@@ -1,0 +1,250 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<cource>
+ <title> 
+   <ja> サンプルコース</ja> 
+   <en>Sample cource</en>
+  </title>
+  <desc>
+   <ja> これは、Noahのコースのサンプルです。</ja> 
+   <en>This is a sample of noah's cource.</en>
+  </desc>
+  <lesson>
+   <title>
+    <ja> 基本的なレッスンの記述</ja> 
+    <en>Basic Lesson</en>
+   </title>
+
+   <page>
+    <text>
+     <ja>
+      これは、文字だけのページです。最も基本となるページです。
+     </ja> 
+     <en>
+      This is the most basic page, which only contains text.
+     </en>
+    </text>
+   </page>
+
+   <page>
+    <text>
+     <ja>本文のテキストを**強調**するには、強調するテキストの前後にアスタリスク(*)を2つ重ねます。</ja>
+     <en>To **emphasize** the body text, insert double asterisk before/after the target text.</en>
+    </text>
+   </page>
+  
+   <page>
+    <text>
+     <ja>
+      ページには、文字だけでなく、このようにYouTube動画を埋め込むことができます。
+     </ja> 
+     <en>
+      The variety of content is not only text.
+      You can embed YouTube movies like this.
+     </en>
+    </text>
+    <youtube videoid="BBgghnQF6E4" />
+   </page>
+  
+   <summary> 
+    <item>
+     <ja>このように、各レッスンの末尾にはまとめを箇条書きで記述します。</ja>
+     <en>Each lesson has a summary list like this.</en>
+    </item>
+    <item>
+     <ja>この文書システムでは、コース > レッスン > ページという単位があります。</ja>
+     <en>This document system is based on a system of "cources", "lessons" and "pages".</en>
+    </item>
+    <item>
+     <ja>この文書システムでは、ページに一つまで動画を埋め込むことができます。</ja>
+     <en>You can embed up to 1 video per page on this document system.</en>
+    </item>
+    </summary>
+  </lesson>
+
+  <lesson>
+   <title>
+    <ja> いろいろなメディア</ja> 
+    <en>Various media types</en>
+   </title>
+   <page>
+    <text>
+     <ja>先ほど紹介したYouTube以外に、画像や音声を埋め込むことができます。</ja>
+     <en>As well as embedded YouTube videos, you can attach image or audio on a page.</en>
+    </text>
+   </page>
+
+   <page>
+    <text>
+     <ja>
+      これは、画像を埋め込む例です。
+     </ja> 
+     <en>
+      This is an example of embedded image.
+     </en>
+    </text>
+    <image src="sample_cource/lake_biwa.png" />
+   </page>
+   
+   <page>
+    <text>
+     <ja>
+      音声も、同様に埋め込むことができます。
+     </ja> 
+     <en>
+      Audio file can be embedded as well.
+     </en>
+    </text>
+    <audio src="sample_cource/Ukrane_anthem.mp3" />
+   </page>
+   <summary>
+    <item>
+     <ja>動画だけでなく、画像や音声も埋め込むことができる。</ja>
+     <en> You can embed not only YouTube video, but also image and audis.</en>
+    </item>
+    <item>
+     <ja>埋め込めるのは、ページあたり動画、画像、音声のいずれかを一つまで</ja>
+     <en>Single page can contain up to one embedded media content from one of Video,Image, and Audio. </en>
+    </item>
+   </summary>
+  </lesson>
+
+  <lesson>
+   <title>
+    <ja>脚注と参照</ja> 
+    <en>Annotations and citations</en>
+   </title>
+   <page>
+    <text>
+      <ja>ページには、本文と(一つ以下の)メディアに加えて、一つ以下の脚注と、一つ以下の出典リストを挿入できます。</ja>
+      <en> A page can contain a body text, one or less media item, annotation and reference list.  </en>
+    </text>
+   </page>
+
+   <page>
+    <text>
+     <ja>このように出典を記述することができます。</ja>
+     <en>This is an example of reference.</en>
+    </text> 
+    <references>
+    <web>
+    <title> Google </title>
+      <url> https://google.com/ </url>
+      <as_of> 2022-03-13 </as_of>
+   </web>
+    </references>
+   </page>
+
+   <page>
+    <text>
+     <ja>補足的情報は、このように記述します。</ja>
+     <en>Additional "notes" are displayed like this:</en>
+    </text> 
+    <annotation type="note">
+      <ja>これをこのシステム内ではnote と呼びます。</ja>
+      <en>This kind of text is called "note" in this system.</en>
+    </annotation>
+   </page>
+
+   <page>
+    <text>
+     <ja>警告は、このように記述できます。</ja>
+     <en>Some warning related to the content can be displayed as following:</en>
+    </text> 
+    <annotation type="warn">
+      <ja>警告はあまり多様せず、その重要性が際立つ範囲内で利用すべきです。</ja>
+      <en>You had better to use this warning style at limited cases to grab users' attenton.</en>
+    </annotation>
+   </page>
+   <summary>
+    <item>
+     <ja>ページには、出典、脚注を挿入することができます。</ja>
+     <en>Page can include references and a annnotation.</en>
+    </item>
+   </summary>
+  </lesson>
+
+  <lesson>
+   <title>
+    <ja>クイズ</ja> 
+    <en>Quiz</en>
+   </title>
+
+   <page>
+    <text>
+     <ja>ページには、これまで見てきた文書ページ以外に、クイズページがあります。</ja>
+     <en>There are 2 kind of pages. "Document pages" which we've learned before, and "quiz page" which we learn here.</en>
+    </text>
+   </page>
+
+   <quiz>
+    <question>
+      <ja>1+1はなんでしょう? 正解だと思う選択肢を選んでください。</ja>
+      <en>Calculate 1+1. Choose correct answer.</en>
+    </question>
+    <select>
+      <option> 
+       <text> 
+        <ja>1</ja>
+        <en>1</en>
+       </text>
+       <comment>
+        <ja>おっと。凡ミスであることを祈っています。答えは2ですね。このように、選択肢ごとにメッセージを書くことができます。
+        </ja>
+        <en>Oops. I wish you've just made careless miss. You can leave a comment for each options like this. </en>
+       </comment>
+      </option>
+      <option correct="true"> 
+       <text> 
+        <ja>2</ja>
+        <en>2</en>
+       </text> 
+       <comment>
+        <ja>そうですね。正解です。このように、選択肢ごとにメッセージを書くことができます。</ja>
+        <en>That's right. You can leave a comment for each options like this. </en>
+       </comment>
+      </option> 
+    </select>
+   </quiz>
+
+   <quiz>
+    <question>
+      <ja>次は間違った答えを見てみましょう。 1+1は?</ja>
+      <en>Let's make a try with wrong answer now. Calculate 1+1.</en>
+    </question>
+    <select>
+      <option> 
+       <text> 
+        <ja>1</ja>
+        <en>1</en>
+       </text>
+       <comment>
+        <ja>正しく誤答を選べましたね。コメントは選択肢ごとに変化します。</ja>
+        <en>You've correctly chosen the wrong answer :). The comment changes depending on the options.</en>
+       </comment>
+      </option>
+      <option correct="true"> 
+       <text> 
+        <ja>2</ja>
+        <en>2</en>
+       </text> 
+       <comment>
+        <ja>誤答を選んで欲しかったのですが...まあ、正解です。</ja>
+        <en>I asked you to choose wrong answe... but yes, that's correct. </en>
+       </comment>
+      </option> 
+     </select>
+    </quiz>
+
+   <summary>
+    <item>
+     <ja>レッスンにはクイズを挿入することができます。</ja>
+     <en>Lesson can include one or more quizes.</en>
+    </item>
+
+    <item>
+     <ja>クイズは、選択式が現在サポートされており、選択後のメッセージと合わせて記述できます。</ja>
+     <en>Only multiple-choice quiz is supported, and you can write messages for each options.</en>
+    </item>
+   </summary>
+  </lesson>
+</cource>
