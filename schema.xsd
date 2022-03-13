@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="https://raw.githubusercontent.com/Mapudo/xs3p/master/xs3p.xsl"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+ <xsd:element name="cource" type="Cource"/>
+
+ <xsd:complexType name="Cource">
+  <xsd:annotation>
+   <xsd:documentation>This element represents each cources: collection of lessons.</xsd:documentation>
+ </xsd:annotation>
+
+  <xsd:sequence>
+   <xsd:element name="title" type="MultilingualText">
+    <xsd:annotation>
+     <xsd:documentation>Title of cources. E.g. "Earthquake", "Typhoon".</xsd:documentation>
+   </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="desc" type="MultilingualText">
+    <xsd:annotation>
+     <xsd:documentation>Cource description in short text.</xsd:documentation>
+   </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="lesson" type="Lesson" minOccurs="1" maxOccurs="unbounded"/>
+  </xsd:sequence>
+ </xsd:complexType>
+
+ <xsd:complexType name="Lesson">
+  <xsd:annotation>
+   <xsd:documentation>This element represents each lesson in a cource.</xsd:documentation>
+ </xsd:annotation>
+
+  <xsd:sequence>
+   <xsd:element name="title" type="MultilingualText">
+    <xsd:annotation>
+     <xsd:documentation>Title of lesson. e.g. "What is Typhoon?"</xsd:documentation>
+   </xsd:annotation>
+    </xsd:element>
+   <xsd:element name="page" minOccurs="1" maxOccurs="unbounded" type="Page"/>
+   <xsd:element name="summary" type="list">
+    <xsd:annotation>
+     <xsd:documentation>Summary of content. It'll be renderd as a bullets.</xsd:documentation>
+   </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+
+
+ <!-- Page Type definitions -->
+<xsd:complexType name="Page">
+ <xsd:choice>
+  <xsd:element name="page" type="ContentPage"/>
+  <xsd:element name="page" type="QuizPage"/>
+ </xsd:choice>
+</xsd:complexType>
+
+<xsd:complexType name="ContentPage">
+ <xsd:annotation>
+  <xsd:documentation>Learning content style page which includes text ,one or less media content, and an annotation.</xsd:documentation>
+</xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="text" type="MultilingualText">
+    <xsd:annotation>
+     <xsd:documentation>Content body text.</xsd:documentation>
+   </xsd:annotation>
+   </xsd:element>
+    <xsd:choice minOccurs="0" maxOccurs="1">
+     <xsd:annotation>
+      <xsd:documentation>A media content such as youtube video, embeded image,and audio. Each page can include up to 1 media content.</xsd:documentation>
+    </xsd:annotation>
+     <xsd:element name="youtube" type="YouTube"/>
+     <xsd:element name="image" type="Image"/>
+     <xsd:element name="audio" type="Audio"/>
+    </xsd:choice>
+   <xsd:element name="annotation" type="Annotation" minOccurs="0" maxOccurs="1"/>
+   <xsd:element name="references" type="References" minOccurs="0" maxOccurs="1"/>
+  </xsd:sequence>
+ </xsd:complexType>
+
+ <xsd:complexType name="QuizPage">
+  <xsd:annotation>
+     <xsd:documentation>Quiz style page.</xsd:documentation>
+   </xsd:annotation>
+
+  <xsd:sequence>
+   <xsd:element name="question" type="MultilingualText">
+    <xsd:annotation>
+     <xsd:documentation>Question text.</xsd:documentation>
+     </xsd:annotation>
+   </xsd:element>
+   <xsd:choice>
+    <xsd:element name="select" type="QuizSelect"/>
+   </xsd:choice>
+  </xsd:sequence>
+ </xsd:complexType>
+
+ <!-- Content type definitions -->
+<xsd:complexType name="YouTube">
+ <xsd:annotation>
+  <xsd:documentation>YouTube video specified with videoId.</xsd:documentation>
+</xsd:annotation>
+ <xsd:attribute name="videoid" type="xsd:string" use="required"/>
+</xsd:complexType>
+
+<xsd:complexType name="Image">
+ <xsd:annotation>
+  <xsd:documentation>Embed an image.</xsd:documentation>
+</xsd:annotation>
+ <xsd:attribute name="src" type="xsd:anyURI" use="required"/>
+</xsd:complexType>
+
+<xsd:complexType name="Audio">
+ <xsd:annotation>
+  <xsd:documentation>Embed an audio.</xsd:documentation>
+</xsd:annotation>
+ <xsd:attribute name="src" type="xsd:anyURI" use="required"/>
+</xsd:complexType>
+
+<!-- Annotation type definitions -->
+<xsd:complexType name="Annotation">
+ <xsd:annotation>
+  <xsd:documentation>Annotation is displayed at a bottom of content page to inform an additional note or warning.</xsd:documentation>
+</xsd:annotation>
+
+ <xsd:complexContent>
+  <xsd:extension  base="MultilingualText">
+   <xsd:attribute name="type" type="AnnotationKind" default="note"/>
+  </xsd:extension>
+ </xsd:complexContent>
+</xsd:complexType>
+
+<xsd:simpleType name="AnnotationKind">
+ <xsd:restriction base="xsd:string">
+  <xsd:enumeration value="note">
+   <xsd:annotation>
+    <xsd:documentation>Some additional informations that people has to be informed.</xsd:documentation>
+   </xsd:annotation>
+  </xsd:enumeration>
+  <xsd:enumeration value="warn">
+   <xsd:annotation>
+    <xsd:documentation>Important warning to keep people's health and safety.</xsd:documentation>
+   </xsd:annotation>
+  </xsd:enumeration>
+</xsd:restriction>
+</xsd:simpleType>
+
+<!-- Quiz type definitions -->
+
+ 
+<xsd:complexType name="QuizSelect">
+ <xsd:annotation>
+  <xsd:documentation>Multiple-choice quiz.</xsd:documentation>
+ </xsd:annotation>
+
+ <xsd:sequence>
+  <xsd:element name="option" type="QuizOption" minOccurs="2" maxOccurs="unbounded"/>
+ </xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="QuizOption">
+ <xsd:annotation>
+  <xsd:documentation>Multiple-choice quiz option.</xsd:documentation>
+ </xsd:annotation>
+ <xsd:sequence>
+  <xsd:element name="text" type="MultilingualText"/>
+  <xsd:element name="after-answer-comment" type="MultilingualText">
+   <xsd:annotation>
+    <xsd:documentation>Comment text that will appear when this option has been chosen.</xsd:documentation>
+   </xsd:annotation>
+  </xsd:element>
+ </xsd:sequence>
+ <xsd:attribute name="correct" type="xsd:boolean" default="false">
+  <xsd:annotation>
+   <xsd:documentation>True if this option is the correct answer.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:attribute>
+</xsd:complexType>
+
+<!-- Reference type definitions -->
+<xsd:complexType name="References">
+
+ <xsd:annotation>
+  <xsd:documentation>References to the original information.</xsd:documentation>
+ </xsd:annotation>
+
+ <xsd:sequence>
+  <xsd:element name="reference" type="Reference" minOccurs="1" maxOccurs="unbounded"/>
+ </xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="Reference">
+ <xsd:annotation>
+  <xsd:documentation>A reference item.</xsd:documentation>
+ </xsd:annotation>
+ <xsd:choice>
+   <xsd:element name="web" type="WebResource"/>
+ </xsd:choice>
+</xsd:complexType>
+
+<!-- Various Reference types -->
+<xsd:complexType name="WebResource">
+ <xsd:annotation>
+  <xsd:documentation>Online content reference item.</xsd:documentation>
+ </xsd:annotation>
+ <xsd:sequence>
+  <xsd:element name="title" type="xsd:string">
+   <xsd:annotation>
+    <xsd:documentation>Title of the content.</xsd:documentation>
+   </xsd:annotation>
+   </xsd:element>
+  <xsd:element name="url" type="xsd:anyURI">
+   <xsd:annotation>
+    <xsd:documentation>Link to the content.</xsd:documentation>
+   </xsd:annotation>
+   </xsd:element>
+  <xsd:element name="as_of" type="xsd:date">
+   <xsd:annotation>
+    <xsd:documentation>View date in `yyyy-mm-dd` fromat.</xsd:documentation>
+   </xsd:annotation>
+   </xsd:element>
+ </xsd:sequence>
+</xsd:complexType>
+
+ <!-- General type definitions -->
+
+ <xsd:complexType name="list">
+  <xsd:annotation>
+    <xsd:documentation>A bullet list</xsd:documentation>
+   </xsd:annotation>
+
+  <xsd:sequence>
+   <xsd:element name="item" type="MultilingualText" minOccurs="1" maxOccurs="unbounded"/>
+  </xsd:sequence>
+ </xsd:complexType>
+
+ <xsd:complexType name="MultilingualText">
+  <xsd:annotation>
+   <xsd:documentation>Prepresents text in multiple languages. </xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="ja" type="xsd:string"/>
+   <xsd:element name="en" type="xsd:string"/>
+  </xsd:sequence>
+ </xsd:complexType>
+
+
+</xsd:schema>
