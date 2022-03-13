@@ -11,12 +11,12 @@ DOC_FILES := $(shell find $(DOC_DIR)/*.xml)
 DOC_DIST_DIR = ./generated/articles
 DOC_DIST_FILES :=$(DOC_FILES:$(DOC_DIR)/%.xml=$(DOC_DIST_DIR)/%.json)
 
-TOOLKIT_DIR=./content_toolkit
+TOOLKIT_DIR=./content_toolkit/dist
 
 
 .PHONY: install
 install:
-	cd $(TOOLKIT_DIR) && $(NPM) install
+	cd $(TOOLKIT_DIR) && $(NPM) install && $(NPM) run build
 
 .PHONY: test-sample
 test-sample:
