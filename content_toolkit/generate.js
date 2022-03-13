@@ -15,6 +15,7 @@ for (let file of files){
 
  const options = {
     ignoreDeclaration: true,
+    preserveOrder: true
 };
 
  const parser = new XMLParser(options);
