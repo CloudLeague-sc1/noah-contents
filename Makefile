@@ -22,9 +22,13 @@ install:
 test-sample:
 	$(NODE) $(TOOLKIT_DIR)/validate.js $(SAMPLE_FILES)
 
+.PHONY: test-article
+test-test-article:
+	$(NODE) $(TOOLKIT_DIR)/validate.js $(DOC_FILES)
+
 .PHONY: test
 test:
-	$(NODE) $(TOOLKIT_DIR)/validate.js $(DOC_FILES)
+	$(NODE) $(TOOLKIT_DIR)/validate.js $(SAMPLE_FILES) $(DOC_FILES)
 
 generate-sample: $(SAMPLE_FILES)
 	$(MAKE) $(SAMPLE_DIST_FILES)
