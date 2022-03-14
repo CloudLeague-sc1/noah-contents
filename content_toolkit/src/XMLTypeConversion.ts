@@ -2,7 +2,9 @@ import {
   Document,
   Cource,
   MultilingualText,
+  MultilingualRichText,
   getEmptyMultilingualText,
+  getEmptyMultilingualRichText,
   Language,
   Lesson,
   Page,
@@ -16,6 +18,8 @@ import {
   Quiz,
   QuizOption,
   Summary,
+  RichText,
+  RichTextInner,
 } from './types/XMLTypes';
 
 import {
@@ -23,8 +27,17 @@ import {
   UglyCource,
   UglyTitle,
   UglyMultilingualText,
+  UglyMultilingualRichText,
   UglyText,
-  UglyTextInner,
+  UglyLanguage,
+  UglyRichText,
+  UglyRichTextInner,
+  UglyRichTextBold,
+  UglyRichTextItalic,
+  UglyRichTextEm,
+  UglyRichTextBr,
+  UglyRichTextUnderline,
+  UglyRichTextStrikeline,
   UglyPageText,
   UglyDescription,
   UglyLesson,
@@ -81,16 +94,19 @@ const beautifyTitle = (uglyTitle: UglyTitle): MultilingualText => {
   return beautifyMultilingualText(uglyTitle.title);
 };
 
-const beautifyText = (uglyText: UglyText): { lang: Language; text: string } => {
+const beautifyText = (
+  uglyText: UglyLanguage<[UglyText]>
+): { lang: Language; text: string } => {
   const lang = Object.keys(uglyText)[0];
 
   if (!is<Language>(lang)) {
     throw new Error(`Unspported language '${lang}' is specified.`);
   }
 
-  const text = uglyText[lang];
+  const text = uglyText[lang][0];
 
-  if (!is<UglyTextInner>(text)) {
+  if (!is<UglyText>(text)) {
+    console.dir(text, { depth: null });
     throw new Error(`Received malformed text object.`);
   }
 
@@ -106,8 +122,75 @@ const beautifyMultilingualText = (
     const { lang, text } = beautifyText(item);
     multilingualText[lang] = text;
   }
-
   return multilingualText;
+};
+
+const beautifyMultilingualRichText = (
+  uglyMultilingualRichText: UglyMultilingualRichText
+): MultilingualRichText => {
+  const multilingualRichText: MultilingualRichText =
+    getEmptyMultilingualRichText();
+
+  for (const item of uglyMultilingualRichText) {
+    const { lang, text } = beautifyRichText(item);
+    multilingualRichText[lang] = text;
+  }
+  return multilingualRichText;
+};
+
+const beautifyRichText = (
+  uglyRichText: UglyLanguage<UglyRichText>
+): { lang: Language; text: RichText } => {
+  const lang = Object.keys(uglyRichText)[0];
+
+  if (!is<Language>(lang)) {
+    throw new Error(`Unspported language '${lang}' is specified.`);
+  }
+
+  const text = uglyRichText[lang];
+
+  if (!is<UglyRichTextInner[]>(text)) {
+    throw new Error(`Received malformed text object.`);
+  }
+
+  return { lang, text: text.map(beautifyUglyRichTextInner) };
+};
+
+const beautifyUglyRichTextInner = (
+  uglyRichTextInner: UglyRichTextInner
+): RichTextInner => {
+  if (is<UglyText>(uglyRichTextInner)) {
+    return beautifyUglyTextInner(uglyRichTextInner);
+  } else if (is<UglyRichTextBold>(uglyRichTextInner)) {
+    return {
+      kind: 'bold',
+      inner: uglyRichTextInner.b.map((x) => beautifyUglyRichTextInner(x)),
+    };
+  } else if (is<UglyRichTextItalic>(uglyRichTextInner)) {
+    return {
+      kind: 'italic',
+      inner: uglyRichTextInner.i.map((x) => beautifyUglyRichTextInner(x)),
+    };
+  } else if (is<UglyRichTextEm>(uglyRichTextInner)) {
+    return {
+      kind: 'em',
+      inner: uglyRichTextInner.em.map((x) => beautifyUglyRichTextInner(x)),
+    };
+  } else if (is<UglyRichTextBr>(uglyRichTextInner)) {
+    return '\n';
+  } else if (is<UglyRichTextUnderline>(uglyRichTextInner)) {
+    return {
+      kind: 'u',
+      inner: uglyRichTextInner.u.map((x) => beautifyUglyRichTextInner(x)),
+    };
+  } else if (is<UglyRichTextStrikeline>(uglyRichTextInner)) {
+    return {
+      kind: 's',
+      inner: uglyRichTextInner.s.map((x) => beautifyUglyRichTextInner(x)),
+    };
+  } else {
+    throw new Error('Unsupported RichTextInner');
+  }
 };
 
 const beautifyDescription = (
@@ -143,7 +226,7 @@ const beautifyLessons = (uglyLesson: UglyLesson): Lesson => {
 const beautifyPage = (uglyPage: UglyPage): Page => {
   const page: Page = {
     type: 'page',
-    text: getEmptyMultilingualText(),
+    text: getEmptyMultilingualRichText(),
     media: undefined,
     annnotation: undefined,
     references: undefined,
@@ -172,8 +255,8 @@ const beautifyPage = (uglyPage: UglyPage): Page => {
   return page;
 };
 
-const beautifyPageText = (uglyPageText: UglyPageText): MultilingualText => {
-  return beautifyMultilingualText(uglyPageText.text);
+const beautifyPageText = (uglyPageText: UglyPageText): MultilingualRichText => {
+  return beautifyMultilingualRichText(uglyPageText.text);
 };
 
 const beautifyYouTube = (uglyYouTube: UglyYouTube): YouTube => {
@@ -200,14 +283,14 @@ const beautifyAudio = (uglyAudio: UglyAudio): Audio => {
 const beautifyNote = (uglyNote: UglyNote): Note => {
   return {
     type: 'note',
-    text: beautifyMultilingualText(uglyNote.annotation),
+    text: beautifyMultilingualRichText(uglyNote.annotation),
   };
 };
 
 const beautifyWarning = (uglyWarning: UglyWarning): Warning => {
   return {
     type: 'warn',
-    text: beautifyMultilingualText(uglyWarning.annotation),
+    text: beautifyMultilingualRichText(uglyWarning.annotation),
   };
 };
 
@@ -249,18 +332,18 @@ const beautifyWebItem = (uglyWebItem: UglyWebItem): WebItem => {
 
 const beautifyReferenceItemTitle = (
   uglyReferenceItemTitle: UglyReferenceItemTitle
-): string => beautifyUglyTextInner(uglyReferenceItemTitle.title);
+): string => beautifyUglyTextInner(uglyReferenceItemTitle.title[0]);
 
 const beautifyURL = (uglyURL: UglyURL): string =>
-  beautifyUglyTextInner(uglyURL.url);
+  beautifyUglyTextInner(uglyURL.url[0]);
 const beautifyAsOf = (uglyAsOf: UglyAsOf): string =>
-  beautifyUglyTextInner(uglyAsOf.as_of);
+  beautifyUglyTextInner(uglyAsOf.as_of[0]);
 
 const beautifyQuiz = (uglyQuiz: UglyQuiz): Quiz => {
   const quiz: Quiz = {
     type: 'quiz',
     quiz_type: 'multiple_choice',
-    question: getEmptyMultilingualText(),
+    question: getEmptyMultilingualRichText(),
     options: [],
   };
 
@@ -280,7 +363,8 @@ const beautifyQuiz = (uglyQuiz: UglyQuiz): Quiz => {
 
 const beautifyQuizQuestion = (
   uglyQuizQuestion: UglyQuizQuestion
-): MultilingualText => beautifyMultilingualText(uglyQuizQuestion.question);
+): MultilingualRichText =>
+  beautifyMultilingualRichText(uglyQuizQuestion.question);
 
 const beautifyQuizSelection = (
   UglyQuizSelection: UglyQuizSelection
@@ -297,15 +381,15 @@ const beautifyQuizSelection = (
 const beautifyQuizOption = (uglyQuizOption: UglyQuizOption): QuizOption => {
   const quizOption: QuizOption = {
     correct: uglyQuizOption[attributeObjectName]?.correct === true,
-    text: getEmptyMultilingualText(),
-    comment: getEmptyMultilingualText(),
+    label: getEmptyMultilingualText(),
+    comment: getEmptyMultilingualRichText(),
   };
 
   for (const item of uglyQuizOption.option) {
     if (is<UglyQuizOptionLabel>(item)) {
-      quizOption.text = beautifyMultilingualText(item.label);
+      quizOption.label = beautifyMultilingualText(item.label);
     } else if (is<UglyQuizOptionComment>(item)) {
-      quizOption.comment = beautifyMultilingualText(item.comment);
+      quizOption.comment = beautifyMultilingualRichText(item.comment);
     } else {
       throw new Error('Unexpected item in quiz option');
     }
@@ -318,11 +402,11 @@ const beautifySummary = (uglySummary: UglySummary): Summary => {
   const summary = [];
 
   for (const summaryItem of uglySummary.summary) {
-    summary.push(beautifyMultilingualText(summaryItem.item));
+    summary.push(beautifyMultilingualRichText(summaryItem.item));
   }
 
   return summary;
 };
 
-const beautifyUglyTextInner = (uglyTextInner: UglyTextInner): string =>
-  uglyTextInner[0]['#text'] as string;
+const beautifyUglyTextInner = (uglyTextInner: UglyText): string =>
+  uglyTextInner['#text'] as string;
