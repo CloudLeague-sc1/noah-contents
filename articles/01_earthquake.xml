@@ -1,0 +1,29 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<cource>
+ <title> 
+   <ja> 地震</ja> 
+   <en>Earthquake</en>
+  </title>
+  <desc>
+   <ja> 地震について</ja> 
+   <en> About earthquake</en>
+  </desc>
+  <lesson>
+   <title>
+    <ja> 地震とは</ja> 
+    <en> What's Earthquake?</en>
+   </title>
+
+   <page>
+    <text>
+     <ja>
+      ほげほげ
+     </ja> 
+     <en>
+      foobar
+     </en>
+    </text>
+   </page>
+   <summary></summary>
+  </lesson>
+</cource>
