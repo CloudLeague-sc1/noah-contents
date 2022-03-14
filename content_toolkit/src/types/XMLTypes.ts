@@ -49,7 +49,7 @@ export type Page = {
   type: 'page';
   text: MultilingualRichText;
   media?: YouTube | Image | Audio;
-  annnotation?: Note | Warning;
+  annotation?: Note | Warning;
   references?: References;
 };
 

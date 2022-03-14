@@ -228,7 +228,7 @@ const beautifyPage = (uglyPage: UglyPage): Page => {
     type: 'page',
     text: getEmptyMultilingualRichText(),
     media: undefined,
-    annnotation: undefined,
+    annotation: undefined,
     references: undefined,
   };
 
@@ -242,9 +242,9 @@ const beautifyPage = (uglyPage: UglyPage): Page => {
     } else if (is<UglyAudio>(item)) {
       page.media = beautifyAudio(item);
     } else if (is<UglyNote>(item)) {
-      page.annnotation = beautifyNote(item);
+      page.annotation = beautifyNote(item);
     } else if (is<UglyWarning>(item)) {
-      page.annnotation = beautifyWarning(item);
+      page.annotation = beautifyWarning(item);
     } else if (is<UglyReferences>(item)) {
       page.references = beautifyRefecences(item);
     } else {
