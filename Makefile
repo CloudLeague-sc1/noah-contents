@@ -12,11 +12,12 @@ DOC_DIST_DIR = ./generated/articles
 DOC_DIST_FILES :=$(DOC_FILES:$(DOC_DIR)/%.xml=$(DOC_DIST_DIR)/%.json)
 
 TOOLKIT_DIR=./content_toolkit/dist
+PREVIEW_DIR = ./preview
 
-
-.PHONY: install
-install:
+.PHONY: init
+init:
 	cd $(TOOLKIT_DIR) && $(NPM) install && $(NPM) run build
+	cd $(PREVIEW_DIR) && $(NPM) run build
 
 .PHONY: test-sample
 test-sample:
@@ -51,3 +52,8 @@ generate: $(SAMPLE_DIST_FILES) $(DOC_DIST_FILES)
 clean:
 	rm -rf $(SAMPLE_DIST_DIR)
 	rm -rf $(DOC_DIST_DIR)
+
+.PHONY: serve
+serve:
+	$(MAKE) generate
+	cd $(PREVIEW_DIR) && $(NPM) run start
