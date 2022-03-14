@@ -2,6 +2,7 @@
 
 noahのコンテンツを記述・格納するためのリポジトリです。
 
+![プレビュー画面の例](./docs/preview.png)
 ## Requirements
 - XSLでフォーマットされたXSD文書が閲覧可能なブラウザまたは処理系
   - Firefox でテストしています
