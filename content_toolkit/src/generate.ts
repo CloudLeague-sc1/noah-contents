@@ -2,6 +2,7 @@ import { XMLParser } from 'fast-xml-parser';
 import fs from 'fs';
 import path from 'path';
 import { Cource } from './types/XMLTypes';
+import srcResolve from './srcResolve';
 
 if (process.argv.length < 4) {
   console.log('Usage: node generate.js [dest] [files...]');
@@ -14,11 +15,11 @@ const dest = process.argv[2];
 const files = process.argv.slice(3);
 
 type CourceDeck = {
-  cource: Cource[];
+  cource: Cource;
   file: string;
-}[];
+};
 
-let cources: CourceDeck = [];
+const cources: CourceDeck[] = [];
 
 for (const file of files) {
   const XMLStr = fs.readFileSync(file, 'utf8');
@@ -33,14 +34,14 @@ for (const file of files) {
 
   const parser = new XMLParser(options);
   const jObj = parser.parse(XMLStr);
-  const result = simplifyOputput(jObj);
+  const result = await srcResolve(path.dirname(file), simplifyOputput(jObj));
 
   fs.writeFileSync(
     path.resolve(process.cwd(), dest, `${path.basename(file, '.xml')}.json`),
     JSON.stringify(result, null, 2)
   );
 
-  cources = cources.concat({ file, cource: result });
+  cources.push({ file, cource: result[0] });
 }
 
 fs.writeFileSync(
