@@ -27,7 +27,7 @@ export type UglyPage = {
 };
 
 export type UglyPageText = {
-  text: UglyMultilingualText;
+  text: UglyMultilingualRichText;
 };
 
 export type UglyYouTube = {
@@ -52,14 +52,14 @@ export type UglyAudio = {
 };
 
 export type UglyNote = {
-  annotation: UglyMultilingualText;
+  annotation: UglyMultilingualRichText;
   [attributeObjectName]: {
     type: 'note';
   };
 };
 
 export type UglyWarning = {
-  annotation: UglyMultilingualText;
+  annotation: UglyMultilingualRichText;
   [attributeObjectName]: {
     type: 'warn';
   };
@@ -70,15 +70,15 @@ export type UglyReferences = {
 };
 
 export type UglyReferenceItemTitle = {
-  title: UglyTextInner;
+  title: [UglyText];
 };
 
 export type UglyURL = {
-  url: UglyTextInner;
+  url: [UglyText];
 };
 
 export type UglyAsOf = {
-  as_of: UglyTextInner;
+  as_of: [UglyText];
 };
 
 export type UglyWebItem = {
@@ -90,7 +90,7 @@ export type UglyQuiz = {
 };
 
 export type UglyQuizQuestion = {
-  question: UglyMultilingualText;
+  question: UglyMultilingualRichText;
 };
 
 export type UglyQuizSelection = {
@@ -109,7 +109,7 @@ export type UglyQuizOptionLabel = {
 };
 
 export type UglyQuizOptionComment = {
-  comment: UglyMultilingualText;
+  comment: UglyMultilingualRichText;
 };
 
 export type UglySummary = {
@@ -117,17 +117,51 @@ export type UglySummary = {
 };
 
 export type UglySummaryItem = {
-  item: UglyMultilingualText;
+  item: UglyMultilingualRichText;
 };
 
-export type UglyMultilingualText = UglyText[];
+export type UglyLanguage<T> = {
+  [lang: string]: T;
+};
+
+export type UglyMultilingualText = UglyLanguage<[UglyText]>[];
 
 export type UglyText = {
-  [lang: string]: UglyTextInner;
+  '#text': string | number;
 };
 
-export type UglyTextInner = [
-  {
-    '#text': string | number;
-  }
-];
+export type UglyMultilingualRichText = UglyLanguage<UglyRichText>[];
+export type UglyRichText = UglyRichTextInner[];
+
+export type UglyRichTextInner =
+  | UglyText
+  | UglyRichTextBold
+  | UglyRichTextItalic
+  | UglyRichTextEm
+  | UglyRichTextBr
+  | UglyRichTextUnderline
+  | UglyRichTextStrikeline;
+
+export type UglyRichTextBold = {
+  b: UglyRichText;
+};
+
+export type UglyRichTextItalic = {
+  i: UglyRichText;
+};
+
+export type UglyRichTextEm = {
+  em: UglyRichText;
+};
+
+export type UglyRichTextBr = {
+  br: [];
+};
+
+export type UglyRichTextUnderline = {
+  u: UglyRichText;
+};
+
+export type UglyRichTextStrikeline = {
+  s: UglyRichText;
+};

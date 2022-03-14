@@ -10,6 +10,24 @@ export type MultilingualText = typeof EmptyMultilingualText;
 export type Language = keyof MultilingualText;
 export const languages = Object.keys(EmptyMultilingualText) as Language[];
 
+const EmptyMultilingualRichText = {
+  en: [] as RichText,
+  ja: [] as RichText,
+};
+
+export const getEmptyMultilingualRichText = (): MultilingualRichText =>
+  Object.assign({}, EmptyMultilingualRichText);
+
+export type MultilingualRichText = typeof EmptyMultilingualRichText;
+
+export type RichTextInner =
+  | string
+  | {
+      kind: 'bold' | 'italic' | 'em' | 'br' | 'u' | 's';
+      inner: RichText;
+    };
+export type RichText = RichTextInner[];
+
 export type Document = Cource[];
 export type Cource = {
   title: MultilingualText;
@@ -29,7 +47,7 @@ export type Lesson = {
 
 export type Page = {
   type: 'page';
-  text: MultilingualText;
+  text: MultilingualRichText;
   media?: YouTube | Image | Audio;
   annnotation?: Note | Warning;
   references?: References;
@@ -51,12 +69,12 @@ export type Audio = {
 
 export type Note = {
   type: 'note';
-  text: MultilingualText;
+  text: MultilingualRichText;
 };
 
 export type Warning = {
   type: 'warn';
-  text: MultilingualText;
+  text: MultilingualRichText;
 };
 
 export type References = WebItem[];
@@ -71,14 +89,14 @@ export type WebItem = {
 export type Quiz = {
   type: 'quiz';
   quiz_type: 'multiple_choice';
-  question: MultilingualText;
+  question: MultilingualRichText;
   options: QuizOption[];
 };
 
 export type QuizOption = {
   correct: boolean;
-  text: MultilingualText;
-  comment: MultilingualText;
+  label: MultilingualText;
+  comment: MultilingualRichText;
 };
 
-export type Summary = MultilingualText[];
+export type Summary = MultilingualRichText[];
