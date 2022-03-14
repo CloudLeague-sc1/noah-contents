@@ -27,11 +27,22 @@
 
    <page>
     <text>
-     <ja>本文のテキストを**強調**するには、強調するテキストの前後にアスタリスク(*)を2つ重ねます。</ja>
-     <en>To **emphasize** the body text, insert double asterisk before/after the target text.</en>
+     <ja>本文のテキストを <em>強調</em>するには、emタグを使います。</ja>
+     <en>To <em> emphasize </em> the body text, use em tag.</en>
     </text>
    </page>
-  
+   <page>
+    <text>
+     <ja>他に、<b>太字</b>や<i>斜体</i>、それらの<b><i>ネスト</i></b>なども利用できます。</ja>
+     <en>You can use <b>Bold</b>, <i>Italic</i> and even its <b><i>Nested expressions.</i></b></en>
+    </text>
+   </page>
+   <page>
+   <text>
+    <ja>さらに、ここで改行 <br/> を挿入したり、<u>下線</u>や<s>打ち消し線</s>も実装されています。</ja>
+    <en>Forthermore, You insert line <br/> break,  <u>underline</u>, and the <s>strike through</s>.</en> 
+   </text>
+  </page>
    <page>
     <text>
      <ja>

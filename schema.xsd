@@ -57,7 +57,7 @@
   <xsd:documentation>Learning content style page which includes text ,one or less media content, and an annotation.</xsd:documentation>
 </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="text" type="MultilingualText">
+   <xsd:element name="text" type="RichMultilingualText">
     <xsd:annotation>
      <xsd:documentation>Content body text.</xsd:documentation>
    </xsd:annotation>
@@ -81,7 +81,7 @@
    </xsd:annotation>
 
   <xsd:sequence>
-   <xsd:element name="question" type="MultilingualText">
+   <xsd:element name="question" type="RichMultilingualText">
     <xsd:annotation>
      <xsd:documentation>Question text.</xsd:documentation>
      </xsd:annotation>
@@ -121,7 +121,7 @@
 </xsd:annotation>
 
  <xsd:complexContent>
-  <xsd:extension  base="MultilingualText">
+  <xsd:extension  base="RichMultilingualText">
    <xsd:attribute name="type" type="AnnotationKind" default="note"/>
   </xsd:extension>
  </xsd:complexContent>
@@ -161,7 +161,7 @@
  </xsd:annotation>
  <xsd:sequence>
   <xsd:element name="label" type="MultilingualText"/>
-  <xsd:element name="comment" type="MultilingualText">
+  <xsd:element name="comment" type="RichMultilingualText">
    <xsd:annotation>
     <xsd:documentation>Comment text that will appear when this option has been chosen.</xsd:documentation>
    </xsd:annotation>
@@ -220,13 +220,13 @@
    </xsd:annotation>
 
   <xsd:sequence>
-   <xsd:element name="item" type="MultilingualText" minOccurs="1" maxOccurs="unbounded"/>
+   <xsd:element name="item" type="RichMultilingualText" minOccurs="1" maxOccurs="unbounded"/>
   </xsd:sequence>
  </xsd:complexType>
 
  <xsd:complexType name="MultilingualText">
   <xsd:annotation>
-   <xsd:documentation>Prepresents text in multiple languages. </xsd:documentation>
+   <xsd:documentation>Represents text in multiple languages. </xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="ja" type="xsd:string"/>
@@ -234,5 +234,32 @@
   </xsd:sequence>
  </xsd:complexType>
 
+  <xsd:complexType name="RichMultilingualText">
+  <xsd:annotation>
+   <xsd:documentation>Represents rich styled text in multiple languages. </xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="ja" type="RichText"/>
+   <xsd:element name="en" type="RichText"/>
+  </xsd:sequence>
+ </xsd:complexType>
+
+ <xsd:complexType name="RichText" mixed="true">
+  <xsd:annotation>
+  <xsd:documentation> Represents rich styled text. b(Bold) i(Italic),em(Emphasis), br (Line break),u(Underline),s(Strikethrough) are available. </xsd:documentation>
+   </xsd:annotation>
+  <xsd:sequence>
+  <xsd:choice minOccurs="0" maxOccurs="unbounded">
+      <xsd:element name="b" type="RichText"/>
+      <xsd:element name="i" type="RichText"/>
+      <xsd:element name="em" type="RichText"/>
+      <xsd:element name="br">
+        <xsd:complexType></xsd:complexType>
+      </xsd:element>
+      <xsd:element name="u" type="RichText"/>
+      <xsd:element name="s" type="RichText"/>
+  </xsd:choice>
+  </xsd:sequence>
+ </xsd:complexType>
 
 </xsd:schema>
