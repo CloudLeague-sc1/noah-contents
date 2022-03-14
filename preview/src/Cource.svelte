@@ -5,7 +5,7 @@ import MultilingualText from './MultilingualText.svelte';
  export let courceWithMetadata;
  let {cource,file}=courceWithMetadata;
 </script>
-<section class="content">
+<section class="column content mb-6">
  <h3><MultilingualText text={cource.title}/></h3>
  <h6>Source: <code>{file}</code></h6>
  <div class="row">
