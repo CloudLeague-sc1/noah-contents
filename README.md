@@ -10,6 +10,17 @@ noahのコンテンツを記述・格納するためのリポジトリです。
 - GNU Make
 
 ## Usage
+
+### 初めに
+
+XMLの検証やJSONの生成、プレビューサーバに関わるtoolkitの展開とビルドを行います。
+
+```zsh
+% make init-toolkit
+% make generate
+% make init-preview
+```
+
 ### 記事を執筆する
 
 1. `articles/{cource-name}`branchを切ってcheckoutする
