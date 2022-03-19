@@ -18,7 +18,7 @@ PREVIEW_DIR = ./preview
 .PHONY: init
 init:
 	cd $(TOOLKIT_DIR) && $(NPM) install && $(NPM) run build
-	cd $(PREVIEW_DIR) && $(NPM) run build
+	cd $(PREVIEW_DIR) && $(NPM) install && $(NPM) run build
 
 .PHONY: test-sample
 test-sample:
