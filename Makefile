@@ -11,7 +11,8 @@ DOC_FILES := $(shell find $(DOC_DIR)/*.xml)
 DOC_DIST_DIR = ./generated/articles
 DOC_DIST_FILES :=$(DOC_FILES:$(DOC_DIR)/%.xml=$(DOC_DIST_DIR)/%.json)
 
-TOOLKIT_DIR=./content_toolkit/dist
+TOOLKIT_DIR=./content_toolkit
+TOOLKIT_DIST_DIR=$(TOOLKIT_DIR)/dist
 PREVIEW_DIR = ./preview
 
 .PHONY: init
@@ -21,29 +22,29 @@ init:
 
 .PHONY: test-sample
 test-sample:
-	$(NODE) $(TOOLKIT_DIR)/validate.js $(SAMPLE_FILES)
+	$(NODE) $(TOOLKIT_DIST_DIR)/validate.js $(SAMPLE_FILES)
 
 .PHONY: test-article
 test-test-article:
-	$(NODE) $(TOOLKIT_DIR)/validate.js $(DOC_FILES)
+	$(NODE) $(TOOLKIT_DIST_DIR)/validate.js $(DOC_FILES)
 
 .PHONY: test
 test:
-	$(NODE) $(TOOLKIT_DIR)/validate.js $(SAMPLE_FILES) $(DOC_FILES)
+	$(NODE) $(TOOLKIT_DIST_DIR)/validate.js $(SAMPLE_FILES) $(DOC_FILES)
 
 generate-sample: $(SAMPLE_FILES)
 	$(MAKE) $(SAMPLE_DIST_FILES)
 
 $(SAMPLE_DIST_DIR)/%.json:	$(SAMPLE_DIR)/%.xml
 	mkdir -p $(SAMPLE_DIST_DIR)
-	$(NODE) $(TOOLKIT_DIR)/generate.js $(SAMPLE_DIST_DIR) $(SAMPLE_DIR)/$*.xml
+	$(NODE) $(TOOLKIT_DIST_DIR)/generate.js $(SAMPLE_DIST_DIR) $(SAMPLE_DIR)/$*.xml
 
 generate-article: $(DOC_FILES)
 	$(MAKE) $(DOC_DIST_FILES)
 
 $(DOC_DIST_DIR)/%.json:	$(DOC_DIR)/%.xml
 	mkdir -p $(DOC_DIST_DIR)
-	$(NODE) $(TOOLKIT_DIR)/generate.js $(DOC_DIST_DIR) $(DOC_DIR)/$*.xml
+	$(NODE) $(TOOLKIT_DIST_DIR)/generate.js $(DOC_DIST_DIR) $(DOC_DIR)/$*.xml
 
 
 generate: $(SAMPLE_DIST_FILES) $(DOC_DIST_FILES)
