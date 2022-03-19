@@ -19,7 +19,7 @@ const printInfo = (text: string) => {
 };
 
 const printError = (text: string) => {
-  console.log(`${chalk.red.bold('[ERR!]')}\t${text}`);
+  console.log(`${chalk.red.bold('[ERROR]')}\t${text}`);
 };
 
 const validateXMLAsync = async (
