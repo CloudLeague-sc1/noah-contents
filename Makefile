@@ -15,9 +15,13 @@ TOOLKIT_DIR=./content_toolkit
 TOOLKIT_DIST_DIR=$(TOOLKIT_DIR)/dist
 PREVIEW_DIR = ./preview
 
-.PHONY: init
-init:
+.PHONY: init-toolkit
+init-toolkit:
 	cd $(TOOLKIT_DIR) && $(NPM) install && $(NPM) run build
+	
+
+.PHONY: init-preview
+init-preview:
 	cd $(PREVIEW_DIR) && $(NPM) install && $(NPM) run build
 
 .PHONY: test-sample
