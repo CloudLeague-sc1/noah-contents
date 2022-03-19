@@ -1,0 +1,11 @@
+name: Article test
+on: ['pull_request']
+jobs:
+  Jest:
+    name: check_eslint_error
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: make init-toolkit
+      - run: make test
+      - run: make generate
