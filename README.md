@@ -7,6 +7,7 @@ noahのコンテンツを記述・格納するためのリポジトリです。
 - XSLでフォーマットされたXSD文書が閲覧可能なブラウザまたは処理系
   - Firefox でテストしています
 - Node.js
+- Java (参考: [xsd-schema-validator](https://www.npmjs.com/package/xsd-schema-validator))
 - GNU Make
 
 ## Usage
