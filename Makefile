@@ -22,7 +22,7 @@ init-toolkit:
 
 .PHONY: init-preview
 init-preview:
-	cd $(PREVIEW_DIR) && $(NPM) install && $(NPM) run build
+	cd $(PREVIEW_DIR) && $(NPM) install
 
 .PHONY: test-sample
 test-sample:
@@ -61,4 +61,4 @@ clean:
 .PHONY: serve
 serve:
 	$(MAKE) generate
-	cd $(PREVIEW_DIR) && $(NPM) run start
+	cd $(PREVIEW_DIR) && $(NPM) run dev
