@@ -42,7 +42,7 @@ test:
 # Generate
 generate-sample: $(SAMPLE_DIST_FILES)
 generate-article: $(DOC_DIST_FILES)
-generate: generate-sample generate-article
+generate: generate-sample generate-article generate-toc
 
 # Generate Inner (Generate JSON)
 $(DIST_DIR)/%.json:	$(DOC_DIR)/%.xml
@@ -52,6 +52,14 @@ $(DIST_DIR)/%.json:	$(DOC_DIR)/%.xml
 $(DIST_DIR)/%.sample.json:	$(SAMPLE_DIR)/%.xml
 	mkdir -p $(DIST_DIR) $(MEDIA_DIST_DIR)
 	$(NODE) $(TOOLKIT_DIST_DIR)/generate.js sample $(MEDIA_DIST_DIR) $(DIST_DIR) $(SAMPLE_DIR)/$*.xml
+
+
+# Generate Table of contents
+.PHONY: generate-toc
+generate-toc:	
+	rm -f $(DIST_DIR)/toc.json
+	mkdir -p $(DIST_DIR)
+	$(NODE) $(TOOLKIT_DIST_DIR)/toc.js $(DIST_DIR) $(DIST_DIR)/toc.json
 
 # Utility
 
