@@ -2,7 +2,7 @@ import { XMLParser } from 'fast-xml-parser';
 import fs from 'fs';
 import path from 'path';
 
-if (process.argv.length < 4) {
+if (process.argv.length < 6) {
   console.log('Usage: node generate.js [dest] [files...]');
   process.exit(1);
 }
