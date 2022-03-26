@@ -11,7 +11,9 @@
     "dev:watch": "npx ts-node-dev src/server.ts",
     "test": "jest",
     "lint": "eslint src/**/*.ts",
-    "lintfix": "eslint 'src/**/*.ts' --fix"
+    "lintfix": "eslint 'src/**/*.ts' --fix",
+    "clean": "rm -rf dist",
+    "clean:hard":"npm run clean && rm -rf node_modules"
   },
   "author": "yuseiito <me@yuseito.com>",
   "license": "ISC",

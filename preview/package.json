@@ -6,7 +6,9 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public --no-clear",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "clean": "rm -rf public/build",
+    "clean:hard":"npm run clean && rm -rf node_modules"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
