@@ -40,17 +40,17 @@ test:
 
 # Generate
 generate-sample: $(SAMPLE_DIST_FILES)
-generate-article:$(DOC_DIST_FILES)
+generate-article: $(DOC_DIST_FILES)
 generate: generate-sample generate-article
 
 # Generate Inner (Generate JSON)
 $(DIST_DIR)/%.json:	$(DOC_DIR)/%.xml
 	mkdir -p $(DIST_DIR)
-	$(NODE) $(TOOLKIT_DIST_DIR)/generate.js $(DIST_DIR) $(DOC_DIR)/$*.xml
+	$(NODE) $(TOOLKIT_DIST_DIR)/generate.js article $(DIST_DIR) $(DOC_DIR)/$*.xml
 
 $(DIST_DIR)/%.sample.json:	$(SAMPLE_DIR)/%.xml
 	mkdir -p $(DIST_DIR)
-	$(NODE) $(TOOLKIT_DIST_DIR)/generate.js $(DIST_DIR) $(SAMPLE_DIR)/$*.xml --sample
+	$(NODE) $(TOOLKIT_DIST_DIR)/generate.js sample $(DIST_DIR) $(SAMPLE_DIR)/$*.xml
 
 # Utility
 
