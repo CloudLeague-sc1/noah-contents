@@ -9,11 +9,14 @@ if (process.argv.length < 4) {
 
 import simplifyOputput from './XMLTypeConversion';
 
+import mediaProcessor from './mediaProcessor';
+
 type CourceType = 'article' | 'sample';
 
 const courceType: CourceType = process.argv[2] as CourceType;
-const dest = process.argv[3];
-const files = process.argv.slice(4);
+const mediaDest = process.argv[3];
+const jsonDest = process.argv[4];
+const files = process.argv.slice(5);
 
 const courceTypeToSuffix = (t: CourceType) =>
   `${t == 'sample' ? '.sample' : ''}.json`;
@@ -31,12 +34,16 @@ for (const file of files) {
 
   const parser = new XMLParser(options);
   const jObj = parser.parse(XMLStr);
-  const result = simplifyOputput(jObj);
+  const result = await mediaProcessor(
+    path.dirname(file),
+    simplifyOputput(jObj),
+    path.join(mediaDest)
+  );
 
   fs.writeFileSync(
     path.resolve(
       process.cwd(),
-      dest,
+      jsonDest,
       `${path.basename(file, '.xml')}${courceTypeToSuffix(courceType)}`
     ),
     JSON.stringify(result, null, 2)

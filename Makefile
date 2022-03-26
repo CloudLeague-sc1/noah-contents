@@ -2,6 +2,7 @@ NPM := npm
 NODE := node
 
 DIST_DIR := ./generated
+MEDIA_DIST_DIR := $(DIST_DIR)/media
 
 SAMPLE_DIR := ./sample
 SAMPLE_FILES := $(shell find $(SAMPLE_DIR)/*.xml)
@@ -45,12 +46,12 @@ generate: generate-sample generate-article
 
 # Generate Inner (Generate JSON)
 $(DIST_DIR)/%.json:	$(DOC_DIR)/%.xml
-	mkdir -p $(DIST_DIR)
-	$(NODE) $(TOOLKIT_DIST_DIR)/generate.js article $(DIST_DIR) $(DOC_DIR)/$*.xml
+	mkdir -p $(DIST_DIR) $(MEDIA_DIST_DIR)
+	$(NODE) $(TOOLKIT_DIST_DIR)/generate.js article $(MEDIA_DIST_DIR) $(DIST_DIR) $(DOC_DIR)/$*.xml
 
 $(DIST_DIR)/%.sample.json:	$(SAMPLE_DIR)/%.xml
-	mkdir -p $(DIST_DIR)
-	$(NODE) $(TOOLKIT_DIST_DIR)/generate.js sample $(DIST_DIR) $(SAMPLE_DIR)/$*.xml
+	mkdir -p $(DIST_DIR) $(MEDIA_DIST_DIR)
+	$(NODE) $(TOOLKIT_DIST_DIR)/generate.js sample $(MEDIA_DIST_DIR) $(DIST_DIR) $(SAMPLE_DIR)/$*.xml
 
 # Utility
 
