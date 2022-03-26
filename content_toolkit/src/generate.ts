@@ -3,7 +3,9 @@ import fs from 'fs';
 import path from 'path';
 
 if (process.argv.length < 6) {
-  console.log('Usage: node generate.js [dest] [files...]');
+  console.log(
+    'Usage: node generate.js [type] [media dest] [json dest] [files...]'
+  );
   process.exit(1);
 }
 
