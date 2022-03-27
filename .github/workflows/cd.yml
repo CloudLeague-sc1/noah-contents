@@ -1,0 +1,22 @@
+name: Generate and publish
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: make init-toolkit
+      - run: make generate
+      - run: make init-preview
+      - run: cd ./preview/public/generated && tar -czvf ../generated.tar.gz .
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./preview/public
+          publish_branch: gh-pages
