@@ -1,7 +1,12 @@
 NPM := npm
 NODE := node
 
-DIST_DIR := ./generated
+TOOLKIT_DIR=./content_toolkit
+TOOLKIT_DIST_DIR=$(TOOLKIT_DIR)/dist
+PREVIEW_DIR = ./preview
+
+
+DIST_DIR := $(PREVIEW_DIR)/public/generated
 MEDIA_DIST_DIR := $(DIST_DIR)/media
 
 SAMPLE_DIR := ./sample
@@ -12,9 +17,6 @@ DOC_DIR := ./articles
 DOC_FILES := $(shell find $(DOC_DIR)/*.xml)
 DOC_DIST_FILES :=$(DOC_FILES:$(DOC_DIR)/%.xml=$(DIST_DIR)/%.json)
 
-TOOLKIT_DIR=./content_toolkit
-TOOLKIT_DIST_DIR=$(TOOLKIT_DIR)/dist
-PREVIEW_DIR = ./preview
 
 # Initialization
 .PHONY: init-toolkit
@@ -24,7 +26,7 @@ init-toolkit:
 
 .PHONY: init-preview
 init-preview:
-	cd $(PREVIEW_DIR) && $(NPM) install
+	cd $(PREVIEW_DIR) && $(NPM) install && $(NPM) run build
 
 # Test
 .PHONY: test-sample
@@ -74,4 +76,4 @@ cleanAll: clean
 
 .PHONY: serve
 serve: generate
-	cd $(PREVIEW_DIR) && $(NPM) run dev
+	cd $(PREVIEW_DIR) && $(NPM) run start
