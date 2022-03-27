@@ -35,12 +35,20 @@ for (const file of files) {
   };
 
   const parser = new XMLParser(options);
-  const jObj = parser.parse(XMLStr);
-  const result = await mediaProcessor(
+  const uglyJSObj = parser.parse(XMLStr);
+  const prettyJSObj = simplifyOputput(uglyJSObj);
+  const finalizedDocumentBody = await mediaProcessor(
     path.dirname(file),
-    simplifyOputput(jObj),
+    prettyJSObj,
     path.join(mediaDest)
   );
+
+  const documentWithMetaData = finalizedDocumentBody.map((x) => {
+    return {
+      meta: { source: file },
+      cource: x,
+    };
+  });
 
   fs.writeFileSync(
     path.resolve(
@@ -48,6 +56,6 @@ for (const file of files) {
       jsonDest,
       `${path.basename(file, '.xml')}${courceTypeToSuffix(courceType)}`
     ),
-    JSON.stringify(result, null, 2)
+    JSON.stringify(documentWithMetaData, null, 2)
   );
 }
