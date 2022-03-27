@@ -1,25 +1,27 @@
 import { XMLParser } from 'fast-xml-parser';
 import fs from 'fs';
 import path from 'path';
-import { Cource } from './types/XMLTypes';
-import srcResolve from './srcResolve';
 
-if (process.argv.length < 4) {
-  console.log('Usage: node generate.js [dest] [files...]');
+if (process.argv.length < 6) {
+  console.log(
+    'Usage: node generate.js [type] [media dest] [json dest] [files...]'
+  );
   process.exit(1);
 }
 
 import simplifyOputput from './XMLTypeConversion';
 
-const dest = process.argv[2];
-const files = process.argv.slice(3);
+import mediaProcessor from './mediaProcessor';
 
-type CourceDeck = {
-  cource: Cource;
-  file: string;
-};
+type CourceType = 'article' | 'sample';
 
-const cources: CourceDeck[] = [];
+const courceType: CourceType = process.argv[2] as CourceType;
+const mediaDest = process.argv[3];
+const jsonDest = process.argv[4];
+const files = process.argv.slice(5);
+
+const courceTypeToSuffix = (t: CourceType) =>
+  `${t == 'sample' ? '.sample' : ''}.json`;
 
 for (const file of files) {
   const XMLStr = fs.readFileSync(file, 'utf8');
@@ -33,18 +35,27 @@ for (const file of files) {
   };
 
   const parser = new XMLParser(options);
-  const jObj = parser.parse(XMLStr);
-  const result = await srcResolve(path.dirname(file), simplifyOputput(jObj));
-
-  fs.writeFileSync(
-    path.resolve(process.cwd(), dest, `${path.basename(file, '.xml')}.json`),
-    JSON.stringify(result, null, 2)
+  const uglyJSObj = parser.parse(XMLStr);
+  const prettyJSObj = simplifyOputput(uglyJSObj);
+  const finalizedDocumentBody = await mediaProcessor(
+    path.dirname(file),
+    prettyJSObj,
+    path.join(mediaDest)
   );
 
-  cources.push({ file, cource: result[0] });
-}
+  const documentWithMetaData = finalizedDocumentBody.map((x) => {
+    return {
+      meta: { source: file },
+      cource: x,
+    };
+  });
 
-fs.writeFileSync(
-  path.resolve(process.cwd(), dest, `${path.basename('courcedeck')}.json`),
-  JSON.stringify({ cources }, null, 2)
-);
+  fs.writeFileSync(
+    path.resolve(
+      process.cwd(),
+      jsonDest,
+      `${path.basename(file, '.xml')}${courceTypeToSuffix(courceType)}`
+    ),
+    JSON.stringify(documentWithMetaData, null, 2)
+  );
+}
