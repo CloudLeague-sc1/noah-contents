@@ -9,13 +9,13 @@
 
  {:else if media.type=='image'}
   <div class="column">
-   <img src="{media.src}" class="mr-auto ml-auto" width="80%" alt="Inserted" /> 
+   <img src="generated/media/{media.src}" class="mr-auto ml-auto" width="80%" alt="Inserted" /> 
   </div>
 
    {:else if media.type=='audio'}
    <div class="column">
    <audio controls>
-    <source src="{media.src}">
+    <source src="generated/media/{media.src}">
   </audio>
   </div>
 
