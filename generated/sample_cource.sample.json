@@ -1,0 +1,493 @@
+[
+  {
+    "meta": {
+      "source": "./sample/sample_cource.xml"
+    },
+    "cource": {
+      "title": {
+        "en": "Sample cource",
+        "ja": "サンプルコース"
+      },
+      "description": {
+        "en": "This is a sample of noah's cource.",
+        "ja": "これは、Noahのコースのサンプルです。"
+      },
+      "lessons": [
+        {
+          "title": {
+            "en": "Basic Lesson",
+            "ja": "基本的なレッスンの記述"
+          },
+          "pages": [
+            {
+              "type": "page",
+              "text": {
+                "en": [
+                  "This is the most basic page, which only contains text."
+                ],
+                "ja": [
+                  "これは、文字だけのページです。最も基本となるページです。"
+                ]
+              }
+            },
+            {
+              "type": "page",
+              "text": {
+                "en": [
+                  "To",
+                  {
+                    "kind": "em",
+                    "inner": [
+                      "emphasize"
+                    ]
+                  },
+                  "the body text, use em tag."
+                ],
+                "ja": [
+                  "本文のテキストを",
+                  {
+                    "kind": "em",
+                    "inner": [
+                      "強調"
+                    ]
+                  },
+                  "するには、emタグを使います。"
+                ]
+              }
+            },
+            {
+              "type": "page",
+              "text": {
+                "en": [
+                  "You can use",
+                  {
+                    "kind": "bold",
+                    "inner": [
+                      "Bold"
+                    ]
+                  },
+                  ",",
+                  {
+                    "kind": "italic",
+                    "inner": [
+                      "Italic"
+                    ]
+                  },
+                  "and even its",
+                  {
+                    "kind": "bold",
+                    "inner": [
+                      {
+                        "kind": "italic",
+                        "inner": [
+                          "Nested expressions."
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "ja": [
+                  "他に、",
+                  {
+                    "kind": "bold",
+                    "inner": [
+                      "太字"
+                    ]
+                  },
+                  "や",
+                  {
+                    "kind": "italic",
+                    "inner": [
+                      "斜体"
+                    ]
+                  },
+                  "、それらの",
+                  {
+                    "kind": "bold",
+                    "inner": [
+                      {
+                        "kind": "italic",
+                        "inner": [
+                          "ネスト"
+                        ]
+                      }
+                    ]
+                  },
+                  "なども利用できます。"
+                ]
+              }
+            },
+            {
+              "type": "page",
+              "text": {
+                "en": [
+                  "Forthermore, You insert line",
+                  "\n",
+                  "break,",
+                  {
+                    "kind": "u",
+                    "inner": [
+                      "underline"
+                    ]
+                  },
+                  ", and the",
+                  {
+                    "kind": "s",
+                    "inner": [
+                      "strike through"
+                    ]
+                  },
+                  "."
+                ],
+                "ja": [
+                  "さらに、ここで改行",
+                  "\n",
+                  "を挿入したり、",
+                  {
+                    "kind": "u",
+                    "inner": [
+                      "下線"
+                    ]
+                  },
+                  "や",
+                  {
+                    "kind": "s",
+                    "inner": [
+                      "打ち消し線"
+                    ]
+                  },
+                  "も実装されています。"
+                ]
+              }
+            },
+            {
+              "type": "page",
+              "text": {
+                "en": [
+                  "The variety of content is not only text.\n      You can embed YouTube movies like this."
+                ],
+                "ja": [
+                  "ページには、文字だけでなく、このようにYouTube動画を埋め込むことができます。"
+                ]
+              },
+              "media": {
+                "type": "youtube",
+                "videoid": "BBgghnQF6E4"
+              }
+            }
+          ],
+          "summary": [
+            {
+              "en": [
+                "Each lesson has a summary list like this."
+              ],
+              "ja": [
+                "このように、各レッスンの末尾にはまとめを箇条書きで記述します。"
+              ]
+            },
+            {
+              "en": [
+                "This document system is based on a system of \"cources\", \"lessons\" and \"pages\"."
+              ],
+              "ja": [
+                "この文書システムでは、コース > レッスン > ページという単位があります。"
+              ]
+            },
+            {
+              "en": [
+                "You can embed up to 1 video per page on this document system."
+              ],
+              "ja": [
+                "この文書システムでは、ページに一つまで動画を埋め込むことができます。"
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "en": "Various media types",
+            "ja": "いろいろなメディア"
+          },
+          "pages": [
+            {
+              "type": "page",
+              "text": {
+                "en": [
+                  "As well as embedded YouTube videos, you can attach image or audio on a page."
+                ],
+                "ja": [
+                  "先ほど紹介したYouTube以外に、画像や音声を埋め込むことができます。"
+                ]
+              }
+            },
+            {
+              "type": "page",
+              "text": {
+                "en": [
+                  "This is an example of embedded image."
+                ],
+                "ja": [
+                  "これは、画像を埋め込む例です。"
+                ]
+              },
+              "media": {
+                "type": "image",
+                "src": "ed867becc1de9c0c404b1c439604067d450a4608467642a82b35bb069ecc349b.jpg"
+              }
+            },
+            {
+              "type": "page",
+              "text": {
+                "en": [
+                  "Audio file can be embedded as well."
+                ],
+                "ja": [
+                  "音声も、同様に埋め込むことができます。"
+                ]
+              },
+              "media": {
+                "type": "audio",
+                "src": "119d4b2cb4b4dd9daf965bfed332d65baefff78607510bac4cf7e55766a7dce2.mp3"
+              }
+            }
+          ],
+          "summary": [
+            {
+              "en": [
+                "You can embed not only YouTube video, but also image and audis."
+              ],
+              "ja": [
+                "動画だけでなく、画像や音声も埋め込むことができる。"
+              ]
+            },
+            {
+              "en": [
+                "Single page can contain up to one embedded media content from one of Video,Image, and Audio."
+              ],
+              "ja": [
+                "埋め込めるのは、ページあたり動画、画像、音声のいずれかを一つまで"
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "en": "Annotations and citations",
+            "ja": "脚注と参照"
+          },
+          "pages": [
+            {
+              "type": "page",
+              "text": {
+                "en": [
+                  "A page can contain a body text, one or less media item, annotation and reference list."
+                ],
+                "ja": [
+                  "ページには、本文と(一つ以下の)メディアに加えて、一つ以下の脚注と、一つ以下の出典リストを挿入できます。"
+                ]
+              }
+            },
+            {
+              "type": "page",
+              "text": {
+                "en": [
+                  "This is an example of reference."
+                ],
+                "ja": [
+                  "このように出典を記述することができます。"
+                ]
+              },
+              "references": [
+                {
+                  "type": "web",
+                  "title": "Google",
+                  "url": "https://google.com/",
+                  "as_of": "2022-03-13"
+                }
+              ]
+            },
+            {
+              "type": "page",
+              "text": {
+                "en": [
+                  "Additional \"notes\" are displayed like this:"
+                ],
+                "ja": [
+                  "補足的情報は、このように記述します。"
+                ]
+              },
+              "annotation": {
+                "type": "note",
+                "text": {
+                  "en": [
+                    "This kind of text is called \"note\" in this system."
+                  ],
+                  "ja": [
+                    "これをこのシステム内ではnote と呼びます。"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "page",
+              "text": {
+                "en": [
+                  "Some warning related to the content can be displayed as following:"
+                ],
+                "ja": [
+                  "警告は、このように記述できます。"
+                ]
+              },
+              "annotation": {
+                "type": "warn",
+                "text": {
+                  "en": [
+                    "You had better to use this warning style at limited cases to grab users' attenton."
+                  ],
+                  "ja": [
+                    "警告はあまり多様せず、その重要性が際立つ範囲内で利用すべきです。"
+                  ]
+                }
+              }
+            }
+          ],
+          "summary": [
+            {
+              "en": [
+                "Page can include references and a annotation."
+              ],
+              "ja": [
+                "ページには、出典、脚注を挿入することができます。"
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "en": "Quiz",
+            "ja": "クイズ"
+          },
+          "pages": [
+            {
+              "type": "page",
+              "text": {
+                "en": [
+                  "There are 2 kind of pages. \"Document pages\" which we've learned before, and \"quiz page\" which we learn here."
+                ],
+                "ja": [
+                  "ページには、これまで見てきた文書ページ以外に、クイズページがあります。"
+                ]
+              }
+            },
+            {
+              "type": "quiz",
+              "quiz_type": "multiple_choice",
+              "question": {
+                "en": [
+                  "Calculate 1+1. Choose correct answer."
+                ],
+                "ja": [
+                  "1+1はなんでしょう? 正解だと思う選択肢を選んでください。"
+                ]
+              },
+              "options": [
+                {
+                  "correct": false,
+                  "label": {
+                    "en": 1,
+                    "ja": 1
+                  },
+                  "comment": {
+                    "en": [
+                      "Oops. I wish you've just made careless miss. You can leave a comment for each options like this."
+                    ],
+                    "ja": [
+                      "おっと。凡ミスであることを祈っています。答えは2ですね。このように、選択肢ごとにメッセージを書くことができます。"
+                    ]
+                  }
+                },
+                {
+                  "correct": true,
+                  "label": {
+                    "en": 2,
+                    "ja": 2
+                  },
+                  "comment": {
+                    "en": [
+                      "That's right. You can leave a comment for each options like this."
+                    ],
+                    "ja": [
+                      "そうですね。正解です。このように、選択肢ごとにメッセージを書くことができます。"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "quiz",
+              "quiz_type": "multiple_choice",
+              "question": {
+                "en": [
+                  "Let's make a try with wrong answer now. Calculate 1+1."
+                ],
+                "ja": [
+                  "次は間違った答えを見てみましょう。 1+1は?"
+                ]
+              },
+              "options": [
+                {
+                  "correct": false,
+                  "label": {
+                    "en": 1,
+                    "ja": 1
+                  },
+                  "comment": {
+                    "en": [
+                      "You've correctly chosen the wrong answer :). The comment changes depending on the options."
+                    ],
+                    "ja": [
+                      "正しく誤答を選べましたね。コメントは選択肢ごとに変化します。"
+                    ]
+                  }
+                },
+                {
+                  "correct": true,
+                  "label": {
+                    "en": 2,
+                    "ja": 2
+                  },
+                  "comment": {
+                    "en": [
+                      "I asked you to choose wrong answe... but yes, that's correct."
+                    ],
+                    "ja": [
+                      "誤答を選んで欲しかったのですが...まあ、正解です。"
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "summary": [
+            {
+              "en": [
+                "Lesson can include one or more quizes."
+              ],
+              "ja": [
+                "レッスンにはクイズを挿入することができます。"
+              ]
+            },
+            {
+              "en": [
+                "Only multiple-choice quiz is supported, and you can write messages for each options."
+              ],
+              "ja": [
+                "クイズは、選択式が現在サポートされており、選択後のメッセージと合わせて記述できます。"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

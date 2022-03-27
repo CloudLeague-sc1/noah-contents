@@ -1,0 +1,48 @@
+[
+  {
+    "meta": {
+      "source": "./articles/01_earthquake.xml"
+    },
+    "cource": {
+      "title": {
+        "en": "Earthquake",
+        "ja": "地震"
+      },
+      "description": {
+        "en": "About earthquake",
+        "ja": "地震について"
+      },
+      "lessons": [
+        {
+          "title": {
+            "en": "What's Earthquake?",
+            "ja": "地震とは"
+          },
+          "pages": [
+            {
+              "type": "page",
+              "text": {
+                "en": [
+                  "foobar"
+                ],
+                "ja": [
+                  "ほげほげ"
+                ]
+              }
+            }
+          ],
+          "summary": [
+            {
+              "en": [
+                "英語のまとめ"
+              ],
+              "ja": [
+                "日本語のまとめ"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
