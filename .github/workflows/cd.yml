@@ -3,7 +3,7 @@ name: Generate and publish
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
