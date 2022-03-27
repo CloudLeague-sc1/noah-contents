@@ -1,24 +1,28 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <cource>
- <title> 
-   <ja> 地震</ja> 
+ <title>
+   <ja> 地震</ja>
    <en>Earthquake</en>
   </title>
   <desc>
-   <ja> 地震について</ja> 
+   <ja> 地震について</ja>
    <en> About earthquake</en>
   </desc>
   <lesson>
    <title>
-    <ja> 地震とは</ja> 
+    <ja> 地震とは</ja>
     <en> What's Earthquake?</en>
    </title>
 
    <page>
     <text>
      <ja>
-      ほげほげ
-     </ja> 
+      日本でくらしていると、地震が起きることがあります。
+      地震は地面に大きな揺れをもたらし、さまざまな被害をもたらすことがあるので注意し、対策しなければなりません。
+      地震によって起こる被害には津波・建物への被害・土砂崩れ・液状化現象などがあります。
+
+      これからどのようなことに注意し、地震が起こった時は何をすれば良いのか勉強していきましょう。
+     </ja>
      <en>
       foobar
      </en>
