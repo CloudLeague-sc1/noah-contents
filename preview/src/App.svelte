@@ -46,7 +46,7 @@
  {/each}
 
 	{:catch error}
-	 <p>An error occurred!</p>
+	 <p>An error occurred! {error}</p>
 	{/await}
 	</div>
 </section>
