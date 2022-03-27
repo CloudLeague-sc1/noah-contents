@@ -4,19 +4,19 @@
 	type Toc={articles:string[],samples:string[]};
 
  const fetchCources = async()=>{
-		const toc : Toc= await (await fetch('/generated/toc.json')).json();
+		const toc : Toc= await (await fetch('generated/toc.json')).json();
 		
 		let cources = [];
 		
 		for (const docName of toc.articles){
-			const articleJson = await (await fetch(`/generated/${docName}`)).json();
+			const articleJson = await (await fetch(`generated/${docName}`)).json();
 			cources = cources.concat(articleJson);
 		}
 
 		let sampleCources = [];
 		
 		for (const docName of toc.samples){
-			const sampleJson = await (await fetch(`/generated/${docName}`)).json();
+			const sampleJson = await (await fetch(`generated/${docName}`)).json();
 			sampleCources = sampleCources.concat(sampleJson);
 		}
 
