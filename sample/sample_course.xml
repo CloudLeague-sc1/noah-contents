@@ -1,12 +1,12 @@
 <?xml version="1.1" encoding="UTF-8"?>
-<cource>
+<course>
  <title> 
    <ja> サンプルコース</ja> 
-   <en>Sample cource</en>
+   <en>Sample course</en>
   </title>
   <desc>
    <ja> これは、Noahのコースのサンプルです。</ja> 
-   <en>This is a sample of noah's cource.</en>
+   <en>This is a sample of noah's course.</en>
   </desc>
   <lesson>
    <title>
@@ -63,7 +63,7 @@
     </item>
     <item>
      <ja>この文書システムでは、コース > レッスン > ページという単位があります。</ja>
-     <en>This document system is based on a system of "cources", "lessons" and "pages".</en>
+     <en>This document system is based on a system of "courses", "lessons" and "pages".</en>
     </item>
     <item>
      <ja>この文書システムでは、ページに一つまで動画を埋め込むことができます。</ja>
@@ -93,7 +93,7 @@
       This is an example of embedded image.
      </en>
     </text>
-    <image src="sample_cource/lake_biwa.jpg" />
+    <image src="sample_course/lake_biwa.jpg" />
    </page>
    
    <page>
@@ -105,7 +105,7 @@
       Audio file can be embedded as well.
      </en>
     </text>
-    <audio src="sample_cource/Ukraine_anthem.mp3" />
+    <audio src="sample_course/Ukraine_anthem.mp3" />
    </page>
    <summary>
     <item>
@@ -258,4 +258,4 @@
     </item>
    </summary>
   </lesson>
-</cource>
+</course>

@@ -11,8 +11,8 @@ export default async (
 ): Promise<Document> => {
   const copyFilesQueue: Promise<void>[] = [];
   const document = doc;
-  for (const cource of document) {
-    for (const lesson of cource.lessons) {
+  for (const course of document) {
+    for (const lesson of course.lessons) {
       for (const page of lesson.pages) {
         if (page.type === 'page') {
           if (is<Image>(page.media) || is<Audio>(page.media)) {

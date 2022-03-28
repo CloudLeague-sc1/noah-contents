@@ -1,8 +1,8 @@
 export const attributeObjectName = ':@';
 
-export type UglyDocument = UglyCource[];
-export type UglyCource = {
-  cource: (UglyTitle | UglyDescription | UglyLesson)[];
+export type UglyDocument = UglyCourse[];
+export type UglyCourse = {
+  course: (UglyTitle | UglyDescription | UglyLesson)[];
 };
 
 export type UglyTitle = {
