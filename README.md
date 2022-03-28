@@ -24,8 +24,8 @@ XMLの検証やJSONの生成、プレビューサーバに関わるtoolkitの展
 
 ### 記事を執筆する
 
-1. `articles/{cource-name}`branchを切ってcheckoutする
-2. `articles/{cource-name}.xml`ファイルを作成する
+1. `articles/{course-name}`branchを切ってcheckoutする
+2. `articles/{course-name}.xml`ファイルを作成する
 3. 記事をXML文書として記述する。
 記述するXMLのスキーマは [sample.xsd](sample.xsd)を参照してください。
 4. 構文をテストする `make test`

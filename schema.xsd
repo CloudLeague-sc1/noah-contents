@@ -2,22 +2,22 @@
 <?xml-stylesheet type="text/xsl" href="https://raw.githubusercontent.com/Mapudo/xs3p/master/xs3p.xsl"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
- <xsd:element name="cource" type="Cource"/>
+ <xsd:element name="course" type="Course"/>
 
- <xsd:complexType name="Cource">
+ <xsd:complexType name="Course">
   <xsd:annotation>
-   <xsd:documentation>This element represents each cources: collection of lessons.</xsd:documentation>
+   <xsd:documentation>This element represents each courses: collection of lessons.</xsd:documentation>
  </xsd:annotation>
 
   <xsd:sequence>
    <xsd:element name="title" type="MultilingualText">
     <xsd:annotation>
-     <xsd:documentation>Title of cources. E.g. "Earthquake", "Typhoon".</xsd:documentation>
+     <xsd:documentation>Title of courses. E.g. "Earthquake", "Typhoon".</xsd:documentation>
    </xsd:annotation>
    </xsd:element>
    <xsd:element name="desc" type="MultilingualText">
     <xsd:annotation>
-     <xsd:documentation>Cource description in short text.</xsd:documentation>
+     <xsd:documentation>Course description in short text.</xsd:documentation>
    </xsd:annotation>
    </xsd:element>
    <xsd:element name="lesson" type="Lesson" minOccurs="1" maxOccurs="unbounded"/>
@@ -26,7 +26,7 @@
 
  <xsd:complexType name="Lesson">
   <xsd:annotation>
-   <xsd:documentation>This element represents each lesson in a cource.</xsd:documentation>
+   <xsd:documentation>This element represents each lesson in a course.</xsd:documentation>
  </xsd:annotation>
 
   <xsd:sequence>

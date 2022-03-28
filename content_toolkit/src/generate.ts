@@ -13,14 +13,14 @@ import simplifyOputput from './XMLTypeConversion';
 
 import mediaProcessor from './mediaProcessor';
 
-type CourceType = 'article' | 'sample';
+type CourseType = 'article' | 'sample';
 
-const courceType: CourceType = process.argv[2] as CourceType;
+const courseType: CourseType = process.argv[2] as CourseType;
 const mediaDest = process.argv[3];
 const jsonDest = process.argv[4];
 const files = process.argv.slice(5);
 
-const courceTypeToSuffix = (t: CourceType) =>
+const courseTypeToSuffix = (t: CourseType) =>
   `${t == 'sample' ? '.sample' : ''}.json`;
 
 for (const file of files) {
@@ -46,7 +46,7 @@ for (const file of files) {
   const documentWithMetaData = finalizedDocumentBody.map((x) => {
     return {
       meta: { source: file },
-      cource: x,
+      course: x,
     };
   });
 
@@ -54,7 +54,7 @@ for (const file of files) {
     path.resolve(
       process.cwd(),
       jsonDest,
-      `${path.basename(file, '.xml')}${courceTypeToSuffix(courceType)}`
+      `${path.basename(file, '.xml')}${courseTypeToSuffix(courseType)}`
     ),
     JSON.stringify(documentWithMetaData, null, 2)
   );
