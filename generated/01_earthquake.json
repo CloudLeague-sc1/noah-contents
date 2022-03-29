@@ -3,7 +3,7 @@
     "meta": {
       "source": "./articles/01_earthquake.xml"
     },
-    "cource": {
+    "course": {
       "title": {
         "en": "Earthquake",
         "ja": "地震"

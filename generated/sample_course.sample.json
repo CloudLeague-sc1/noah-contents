@@ -1,15 +1,15 @@
 [
   {
     "meta": {
-      "source": "./sample/sample_cource.xml"
+      "source": "./sample/sample_course.xml"
     },
-    "cource": {
+    "course": {
       "title": {
-        "en": "Sample cource",
+        "en": "Sample course",
         "ja": "サンプルコース"
       },
       "description": {
-        "en": "This is a sample of noah's cource.",
+        "en": "This is a sample of noah's course.",
         "ja": "これは、Noahのコースのサンプルです。"
       },
       "lessons": [
@@ -187,7 +187,7 @@
             },
             {
               "en": [
-                "This document system is based on a system of \"cources\", \"lessons\" and \"pages\"."
+                "This document system is based on a system of \"courses\", \"lessons\" and \"pages\"."
               ],
               "ja": [
                 "この文書システムでは、コース > レッスン > ページという単位があります。"
