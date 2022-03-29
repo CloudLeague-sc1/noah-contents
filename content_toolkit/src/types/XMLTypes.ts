@@ -28,8 +28,8 @@ export type RichTextInner =
     };
 export type RichText = RichTextInner[];
 
-export type Document = Cource[];
-export type Cource = {
+export type Document = Course[];
+export type Course = {
   title: MultilingualText;
   description: MultilingualText;
   lessons: Lesson[];

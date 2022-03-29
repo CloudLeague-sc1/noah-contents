@@ -1,6 +1,6 @@
 import {
   Document,
-  Cource,
+  Course,
   MultilingualText,
   MultilingualRichText,
   getEmptyMultilingualText,
@@ -24,7 +24,7 @@ import {
 
 import {
   UglyDocument,
-  UglyCource,
+  UglyCourse,
   UglyTitle,
   UglyMultilingualText,
   UglyMultilingualRichText,
@@ -65,29 +65,29 @@ import {
 import { is } from 'typescript-is';
 
 export default (document: UglyDocument): Document => {
-  return document.map((cource) => beautifyCource(cource));
+  return document.map((course) => beautifyCourse(course));
 };
 
-const beautifyCource = (uglyCource: UglyCource): Cource => {
-  const cource: Cource = {
+const beautifyCourse = (uglyCourse: UglyCourse): Course => {
+  const course: Course = {
     title: getEmptyMultilingualText(),
     description: getEmptyMultilingualText(),
     lessons: [],
   };
 
-  for (const item of uglyCource.cource) {
+  for (const item of uglyCourse.course) {
     if (is<UglyTitle>(item)) {
-      cource.title = beautifyTitle(item);
+      course.title = beautifyTitle(item);
     } else if (is<UglyDescription>(item)) {
-      cource.description = beautifyDescription(item);
+      course.description = beautifyDescription(item);
     } else if (is<UglyLesson>(item)) {
-      cource.lessons.push(beautifyLessons(item));
+      course.lessons.push(beautifyLessons(item));
     } else {
       console.dir(item, { depth: null });
       throw new Error('Invalid item. ');
     }
   }
-  return cource;
+  return course;
 };
 
 const beautifyTitle = (uglyTitle: UglyTitle): MultilingualText => {

@@ -1,26 +1,26 @@
 <script lang="ts">
-	import Cource from './Cource.svelte';
+	import Course from './Course.svelte';
 
 	type Toc={articles:string[],samples:string[]};
 
- const fetchCources = async()=>{
+ const fetchCourses = async()=>{
 		const toc : Toc= await (await fetch('generated/toc.json')).json();
 		
-		let cources = [];
+		let courses = [];
 		
 		for (const docName of toc.articles){
 			const articleJson = await (await fetch(`generated/${docName}`)).json();
-			cources = cources.concat(articleJson);
+			courses = courses.concat(articleJson);
 		}
 
-		let sampleCources = [];
+		let sampleCourses = [];
 		
 		for (const docName of toc.samples){
 			const sampleJson = await (await fetch(`generated/${docName}`)).json();
-			sampleCources = sampleCources.concat(sampleJson);
+			sampleCourses = sampleCourses.concat(sampleJson);
 		}
 
-		return {cources,sampleCources};
+		return {courses,sampleCourses};
 };
 
 </script>
@@ -28,19 +28,19 @@
 <section class="section">
 	<div class="container">
 			<h1 class="title has-text-info">Contents Preview</h1>
-	{#await fetchCources()}
+	{#await fetchCourses()}
 	<p>...waiting</p>
-	{:then {cources,sampleCources}}
-	{#each cources as cource}
+	{:then {courses,sampleCourses}}
+	{#each courses as course}
 	<div class="row">
-		<Cource courceWithMetadata = {cource}/>
+		<Course courseWithMetadata = {course}/>
 		<hr/>
 	</div>
  {/each}
 
-	{#each sampleCources as sampleCource}
+	{#each sampleCourses as sampleCourse}
 	<div class="row">
-		<Cource courceWithMetadata = {sampleCource}/>
+		<Course courseWithMetadata = {sampleCourse}/>
 		<hr/>
 	</div>
  {/each}
