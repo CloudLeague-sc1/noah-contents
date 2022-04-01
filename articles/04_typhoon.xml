@@ -1,0 +1,109 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<course>
+ <title> 
+   <ja> 台風</ja> 
+   <en>Typhoon</en>
+  </title>
+  <desc>
+   <ja> 台風について</ja> 
+   <en> About typhoon</en>
+  </desc>
+  <lesson>
+   <title>
+    <ja> 台風とは</ja> 
+    <en> What's Typhoon?</en>
+   </title>
+
+   <page>
+    <text>
+     <ja>
+      台風は、夏から秋にかけて発生する気象現象です。<br/>
+      台風〇〇号というように、年に複数回発生し、大雨や強風を伴って洪水、土砂崩れなどを引き起こします。<br/>
+      過去に日本では、伊勢湾台風や枕崎台風など死者が3000人を超えるものもありました。<br/>
+
+     </ja>
+     <en>
+      hogehoge
+     </en>
+    </text>
+   </page>
+   <page>
+    <text>
+      <ja>
+        気象予報で台風の発生がわかった場合、屋外にあるものは安全な場所に避難させましょう。<br/>
+        物が飛んで来て窓ガラスが割れることを防ぐため、窓に雨戸やシャッターがあれば下ろしましょう。窓の鍵を閉め、カーテンも閉めましょう。窓ガラスに養生テープや飛散防止フィルムを貼ることもできます。飛来物でガラスが割れることは防げませんが、もし割れた際に室内に破片が飛び散るリスクを抑えることができます。
+      </ja>
+      <en>
+        hogehoge
+      </en>
+    </text>
+   </page>
+   <summary>
+     <item><ja>hogehoge</ja><en>hogehoge</en></item>
+   </summary>
+  
+  </lesson>
+<!-- 2個目のlesson -->
+  <lesson>
+   <title>
+    <ja> 洪水とは</ja> 
+    <en> hogehoge</en>
+   </title>
+
+   <page>
+    <text>
+     <ja>
+      洪水とは、台風や豪雨、雪解け水によって河川の水量が急激に増すことです。河川から水が溢れなくても洪水と呼びますが、溢れた場合は「はん濫」と呼びます。<br/>
+      台風などの豪雨によって洪水が発生すると、家屋が流されたり、道路が利用できなくなったりします。
+
+
+     </ja>
+     <en>
+      hogehoge
+     </en>
+    </text>
+   </page>
+   <page>
+    <text>
+      <ja>
+        洪水が起きたら以下のことに注意しましょう<br/>
+
+        ラジオ・テレビで最新の気象・災害情報に注意し、危険を感じたら避難準備をしましょう。<br/>
+
+        避難する前に、ガス、電気、火種を消し、避難場所を確認。万一途中で家族が離ればなれになったときの集合場所を決めておきましょう。
+
+      </ja>
+      <en>
+        hogehoge
+      </en>
+    </text>
+   </page>
+   <summary>
+     <item><ja>hogehoge</ja><en>hogehoge</en></item>
+   </summary>
+  
+  </lesson>
+  <lesson>
+   <title>
+    <ja> 高潮とは</ja> 
+    <en> hogehoge</en>
+   </title>
+
+   <page>
+    <text>
+     <ja>
+      高潮は、台風などの影響により、気圧が低下し海面が吸い上げられたり、強風により海面が吹き寄せられるなどして、海面の水位が普段よりも上昇する現象のことです。その結果、河口の水位が高くなり、河口付近の低地に浸水被害をもたらします。
+
+
+     </ja>
+     <en>
+      hogehoge
+     </en>
+    </text>
+   </page>
+   <summary>
+     <item><ja>hogehoge</ja><en>hogehoge</en></item>
+   </summary>
+  
+  </lesson>
+</course>
