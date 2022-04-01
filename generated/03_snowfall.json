@@ -53,6 +53,54 @@
               ]
             }
           ]
+        },
+        {
+          "title": {
+            "en": "What's Snowfall?",
+            "ja": "大雪によって起こる被害"
+          },
+          "pages": [
+            {
+              "type": "page",
+              "text": {
+                "en": [
+                  "More than half of Japan is designated as a heavy snowfall area, and approximately 20 million of people live in these areas.",
+                  "\n",
+                  "When living in these areas, it is necessary to be prepared for heavy snowfall.",
+                  "\n",
+                  "In this article, we will learn about the damage caused by heavy snowfall in Japan and how to prepare for it."
+                ],
+                "ja": [
+                  "除雪中の事故は大雪による被害の有名なもののうちの一つです。自宅や建物の雪を下ろすために屋根に登って雪を下ろすときなどに転落するなどによって引き起こされます。"
+                ]
+              }
+            },
+            {
+              "type": "page",
+              "text": {
+                "en": [
+                  "More than half of Japan is designated as a heavy snowfall area, and approximately 20 million of people live in these areas.",
+                  "\n",
+                  "When living in these areas, it is necessary to be prepared for heavy snowfall.",
+                  "\n",
+                  "In this article, we will learn about the damage caused by heavy snowfall in Japan and how to prepare for it."
+                ],
+                "ja": [
+                  "車による事故も大雪によって起こる被害の一つです。雪が積もった後の路面は凍結していることがあるため、スリップによって事故が起こることがあります。"
+                ]
+              }
+            }
+          ],
+          "summary": [
+            {
+              "en": [
+                "Make sure to prepare for Snowfall if you live in heavy snow area"
+              ],
+              "ja": [
+                "大雪によって起こる事故を知っておくことが必要"
+              ]
+            }
+          ]
         }
       ]
     }
