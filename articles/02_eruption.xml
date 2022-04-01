@@ -10,25 +10,25 @@
   </desc>
   <lesson>
    <title>
-    <ja> 噴火とは</ja> 
-    <en> What's Earthquake?</en>
+    <ja> 噴火とは</ja>
+    <en> What's Eruption?</en>
    </title>
 
    <page>
     <text>
      <ja>
-      日本にはたくさんの活火山が存在し、それらの火山の噴火は時に私たちの生活に大きな被害をもたらすことがあります。
+      日本にはたくさんの活火山が存在し、それらの火山の噴火は時に私たちの生活に大きな被害をもたらすことがあります。<br/>
       今回は火山の噴火とそれによってもたらされる被害について学習していきましょう。
-      
-     </ja> 
+     </ja>
      <en>
-      foobar
+      There are many active volcanoes in Japan, and their eruptions can sometimes cause great damage to our lives.<br/>
+      In this article, we will learn about volcanic eruptions and the damage they can cause.
      </en>
     </text>
     <youtube videoid="zXA9RCmZJCY " />
    </page>
    <summary>
-     <item><ja>日本は火山がたくさんあるのでそれらの噴火に備えることが必要</ja><en>英語のまとめ</en></item>
+     <item><ja>日本は火山がたくさんあるのでそれらの噴火に備えることが必要</ja><en>Japan has many volcanoes, so it is necessary to prepare for their eruption</en></item>
    </summary>
   
   </lesson>
