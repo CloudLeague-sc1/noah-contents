@@ -39,7 +39,8 @@
     </text>
    </page>
    <summary>
-     <item><ja>hogehoge</ja><en>hogehoge</en></item>
+     <item><ja>台風は年に複数回発生し、洪水や土砂崩れなどをひきおこす</ja><en>hogehoge</en></item>
+     <item><ja>台風の発生がわかったら事前に対策しておく必要がある</ja><en>hogehoge</en></item>
    </summary>
   
   </lesson>
@@ -79,7 +80,7 @@
     </text>
    </page>
    <summary>
-     <item><ja>hogehoge</ja><en>hogehoge</en></item>
+     <item><ja>洪水が起こったら最新の情報を入手し、迅速に避難ができるよう準備をしておくと良い</ja><en>hogehoge</en></item>
    </summary>
   
   </lesson>
@@ -94,7 +95,6 @@
      <ja>
       高潮は、台風などの影響により、気圧が低下し海面が吸い上げられたり、強風により海面が吹き寄せられるなどして、海面の水位が普段よりも上昇する現象のことです。その結果、河口の水位が高くなり、河口付近の低地に浸水被害をもたらします。
 
-
      </ja>
      <en>
       hogehoge
@@ -102,7 +102,7 @@
     </text>
    </page>
    <summary>
-     <item><ja>hogehoge</ja><en>hogehoge</en></item>
+     <item><ja>台風によって高潮が起こることもあるのでそうした場合には海にも注意しなければならない</ja><en>hogehoge</en></item>
    </summary>
   
   </lesson>
