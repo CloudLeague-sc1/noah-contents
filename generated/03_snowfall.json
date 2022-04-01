@@ -1,0 +1,52 @@
+[
+  {
+    "meta": {
+      "source": "./articles/03_snowfall.xml"
+    },
+    "course": {
+      "title": {
+        "en": "Snowfall",
+        "ja": "大雪"
+      },
+      "description": {
+        "en": "About snowfall",
+        "ja": "大雪について"
+      },
+      "lessons": [
+        {
+          "title": {
+            "en": "What's Earthquake?",
+            "ja": "日本の大雪災害"
+          },
+          "pages": [
+            {
+              "type": "page",
+              "text": {
+                "en": [
+                  "foobar"
+                ],
+                "ja": [
+                  "日本は国土の半分以上が豪雪災害に指定されており、日本で暮らす人々のうちおよそ2000万人がそれらの地域に暮らしています。\n      それらの地域で暮らす際には大雪への備えが必要です。\n      今回は日本での大雪被害とそれらへの対策について学習していきましょう。"
+                ]
+              },
+              "media": {
+                "type": "youtube",
+                "videoid": "c4NQR69Kx1I"
+              }
+            }
+          ],
+          "summary": [
+            {
+              "en": [
+                "英語のまとめ"
+              ],
+              "ja": [
+                "豪雪地帯に暮らす際にはそれらへの対策が必要"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
