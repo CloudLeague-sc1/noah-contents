@@ -1,0 +1,35 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<course>
+ <title> 
+   <ja> 噴火</ja> 
+   <en>Eruption</en>
+  </title>
+  <desc>
+   <ja> 噴火について</ja> 
+   <en> About eruption</en>
+  </desc>
+  <lesson>
+   <title>
+    <ja> 噴火とは</ja> 
+    <en> What's Earthquake?</en>
+   </title>
+
+   <page>
+    <text>
+     <ja>
+      日本にはたくさんの活火山が存在し、それらの火山の噴火は時に私たちの生活に大きな被害をもたらすことがあります。
+      今回は火山の噴火とそれによってもたらされる被害について学習していきましょう。
+      
+     </ja> 
+     <en>
+      foobar
+     </en>
+    </text>
+    <youtube videoid="zXA9RCmZJCY " />
+   </page>
+   <summary>
+     <item><ja>日本は火山がたくさんあるのでそれらの噴火に備えることが必要</ja><en>英語のまとめ</en></item>
+   </summary>
+  
+  </lesson>
+</course>
