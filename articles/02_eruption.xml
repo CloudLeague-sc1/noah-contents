@@ -32,4 +32,49 @@
    </summary>
   
   </lesson>
+  <lesson>
+   <title>
+    <ja> 火山への警戒</ja>
+    <en> What's Eruption?</en>
+   </title>
+
+   <page>
+    <text>
+     <ja>
+      火山の情報として発信されるものには噴火警戒レベルと噴火速報の2種類が存在しています。<br/>
+      それぞれについて次のページから確認していきましょう。
+     </ja>
+     <en>
+      hogehoge
+     </en>
+    </text>
+   </page>
+   <page>
+    <text>
+     <ja>
+      噴火警戒レベルは火山活動の状況に応じて「警戒が必要な範囲」と防災期間や住民等の「とるべき防災対応」を五段階に区分して発表する指標であり、以下のような5つの段階に区切られています。
+     </ja>
+     <en>
+      hogehoge
+     </en>
+    </text>
+    <image src="./eruption/K10013498631_2202241029_2202241029_01_03.jpeg"/>
+   </page>
+   <page>
+    <text>
+     <ja>
+      噴火速報は噴火の発生を発表する情報で火山が噴火したことを噴火したことを端的に伝え、身を守る行動をとってもらうために出される情報です。
+      以下のような情報が伝えられます。
+     </ja>
+     <en>
+      hogehoge
+     </en>
+    </text>
+    <image src="./eruption/000089677.png"/>
+   </page>
+   <summary>
+     <item><ja>噴火の際にはさまざまな情報が発表されるので注意して確認することが必要</ja><en>Japan has many volcanoes, so it is necessary to prepare for their eruption</en></item>
+   </summary>
+  
+  </lesson>
 </course>
