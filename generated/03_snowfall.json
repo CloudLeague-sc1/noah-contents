@@ -15,7 +15,7 @@
       "lessons": [
         {
           "title": {
-            "en": "What's Earthquake?",
+            "en": "What's Snowfall?",
             "ja": "日本の大雪災害"
           },
           "pages": [
@@ -23,10 +23,18 @@
               "type": "page",
               "text": {
                 "en": [
-                  "foobar"
+                  "More than half of Japan is designated as a heavy snowfall area, and approximately 20 million of people live in these areas.",
+                  "\n",
+                  "When living in these areas, it is necessary to be prepared for heavy snowfall.",
+                  "\n",
+                  "In this article, we will learn about the damage caused by heavy snowfall in Japan and how to prepare for it."
                 ],
                 "ja": [
-                  "日本は国土の半分以上が豪雪災害に指定されており、日本で暮らす人々のうちおよそ2000万人がそれらの地域に暮らしています。\n      それらの地域で暮らす際には大雪への備えが必要です。\n      今回は日本での大雪被害とそれらへの対策について学習していきましょう。"
+                  "日本は国土の半分以上が豪雪地帯に指定されており、日本で暮らす人々のうちおよそ2000万人がそれらの地域に暮らしています。",
+                  "\n",
+                  "それらの地域で暮らす際には大雪への備えが必要です。",
+                  "\n",
+                  "今回は日本での大雪被害とそれらへの対策について学習していきましょう。"
                 ]
               },
               "media": {
@@ -38,7 +46,7 @@
           "summary": [
             {
               "en": [
-                "英語のまとめ"
+                "Make sure to prepare for Snowfall if you live in heavy snow area"
               ],
               "ja": [
                 "豪雪地帯に暮らす際にはそれらへの対策が必要"

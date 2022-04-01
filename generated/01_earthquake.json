@@ -23,7 +23,10 @@
               "type": "page",
               "text": {
                 "en": [
-                  "foobar"
+                  "If you live in Japan, you might come up against earthquakes.",
+                  "\n",
+                  "Earthquakes can cause large ground shaking that can result in various types of damage, so we must be careful and prepare.",
+                  "\n"
                 ],
                 "ja": [
                   "日本でくらしていると、地震が起きることがあります。",
@@ -41,7 +44,38 @@
               "type": "page",
               "text": {
                 "en": [
-                  "hogehoge"
+                  "Damages caused by earthquakes include",
+                  {
+                    "kind": "em",
+                    "inner": [
+                      "tsunamis"
+                    ]
+                  },
+                  ",",
+                  {
+                    "kind": "em",
+                    "inner": [
+                      "damage to buildings"
+                    ]
+                  },
+                  ",",
+                  {
+                    "kind": "em",
+                    "inner": [
+                      "landslides"
+                    ]
+                  },
+                  ", and",
+                  {
+                    "kind": "em",
+                    "inner": [
+                      "liquefaction"
+                    ]
+                  },
+                  ".",
+                  "\n",
+                  "Let's learn what to watch out for and what to do in the event of an earthquake.",
+                  "\n"
                 ],
                 "ja": [
                   "地震によって起こる被害には",
@@ -74,7 +108,7 @@
                   },
                   "などがあります。",
                   "\n",
-                  "これからどのようなことに注意し、地震が起こった時は何をすれば良いのか学習していきましょう。",
+                  "これからどのようなことに注意し、地震が起こった時は何をすれば良いのか勉強していきましょう。",
                   "\n"
                 ]
               }
@@ -83,7 +117,7 @@
           "summary": [
             {
               "en": [
-                "英語のまとめ"
+                "Damage caused by earthquakes include tsunamis, damage to buildings, landslides, and liquefaction."
               ],
               "ja": [
                 "地震によって起こる被害には津波・建物への被害・土砂崩れ・液状化現象などがある"
@@ -93,7 +127,7 @@
         },
         {
           "title": {
-            "en": "hogehoge",
+            "en": "Damage of Tsunami",
             "ja": "津波の被害"
           },
           "pages": [
@@ -101,7 +135,9 @@
               "type": "page",
               "text": {
                 "en": [
-                  "foobar"
+                  "Tsunamis are large waves generated when the ocean is shaken by an earthquake wave.",
+                  "\n",
+                  "Tsunamis can be large enough to cover an entire city, or they can come repeatedly, so if you are near the coast side when an earthquake strikes, you should be especially careful of this type of damage."
                 ],
                 "ja": [
                   "津波は地震の波によって海が揺らされることによって発生する大きな波です。\n      津波は街全体を覆うような大きなものがきたり、繰り返しおとずれることもあるため、地震が起こった時に海沿いにいる場合は特に注意したい被害です。"
@@ -116,7 +152,12 @@
               "type": "page",
               "text": {
                 "en": [
-                  "hogehoge"
+                  "If you feel a tremor, it is important to get away from the coast as quickly as possible and head for higher ground.",
+                  "\n",
+                  "Tsunamis can come many times, so do not re-enter an area once a tsunami has hit.",
+                  "\n",
+                  "Such signs may be placed at tsunami evacuation places and buildings where tsunamis are expected to hit. You should definitely  check such signs when you are close to the coast side in case of an emergency.",
+                  "\n"
                 ],
                 "ja": [
                   "揺れを感じた場合にはいち早く海岸から離れ高台に向かうことが重要です。\n      津波は何度もくる可能性があるので津波が北地域に再び立ち入らないようにしてください。\n      津波がくることが予想されている場所にはこのような津波避難場所の看板や、津波避難ビルの標識が設置されている場合があります。万一に備え、海沿いにいる場合にはこのような標識を確認しておくと良いです。"
@@ -131,7 +172,7 @@
           "summary": [
             {
               "en": [
-                "英語のまとめ"
+                "It's Important to go for higher place if you are close to the coast side when you come up against Earthquake"
               ],
               "ja": [
                 "揺れを感じた時に海沿いにいた場合には高台に向かうことが重要"
@@ -141,7 +182,7 @@
         },
         {
           "title": {
-            "en": "hogehoge",
+            "en": "Damage to buildings",
             "ja": "建物への被害"
           },
           "pages": [
@@ -149,10 +190,15 @@
               "type": "page",
               "text": {
                 "en": [
-                  "foobar"
+                  "Damage to buildings caused by earthquakes can include building collapse, building fire, and damage to building interiors.",
+                  "\n",
+                  "Buildings may collapse when they are shaken violently by earthquakes.Fires can also be caused by earthquakes, and if they occur in densely populated areas, firefighting may be delayed, resulting in serious damage.",
+                  "\n",
+                  "Also, even if the building itself appears to be safe, the shaking may cause damage to the building and furniture.",
+                  "\n"
                 ],
                 "ja": [
-                  "地震による建物への被害では建物の倒壊・建物の火災・建物内部の損壊などが起こります。\n      地震によって建物が大きく揺らされることにより、建物が倒壊することがあります。また、地震によって火災が発生することもあり、住宅が密集する場所で発生した場合には消化が遅れ大きな被害となることもあります。\n      また、建物事態は無事なように見えても揺れの影響により、建物や家具が傷んでいることもあるので注意が必要です。"
+                  "地震による建物への被害では建物の倒壊・建物の火災・建物内部の損壊などが起こります。\n      地震によって建物が大きく揺らされることにより、建物が倒壊することがあります。また、地震によって火災が発生することもあり、住宅が密集する場所で発生した場合には消化が遅れ大きな被害となることもあります。\n      また、建物自体は無事なように見えても揺れの影響により、建物や家具が傷んでいることもあるので注意が必要です。"
                 ]
               }
             },
@@ -160,7 +206,11 @@
               "type": "page",
               "text": {
                 "en": [
-                  "hogehoge"
+                  "Make sure to check the earthquake resistance of the building where you live in advance. It is also important to check the fire resistance of your house.",
+                  "\n",
+                  "When the earthquake occurs, after the shaking has subsided, you can prevent fires by turning off gas appliances and turning off the circuit breaker before evacuating.",
+                  "\n",
+                  "It is also necessary to check gas and electric appliances before using them, as they may still be damaged after the earthquake."
                 ],
                 "ja": [
                   "建物への被害を防ぐために、事前に自分が暮らしている建物の耐震性を確認しておきましょう。また自分の家の耐火性を確認しておくことも大切です。また、地震が起きた時には揺れがおさまったあとにガス機器を切り、ブレーカーを落としてから避難することによって火災を防ぐことができます。\n      また、地震がおさまった後もガスや電気機器にダメージが入っていることがあるので、使う前に確認することが必要です。"
@@ -171,7 +221,7 @@
           "summary": [
             {
               "en": [
-                "英語のまとめ"
+                "When the earthquake occurs, it is important to prevent fires and to check for damage to electrical equipment"
               ],
               "ja": [
                 "地震が起こった際には火災を防ぐこととことと電気機器にダメージが入っていないか確認することが大切"
@@ -181,7 +231,7 @@
         },
         {
           "title": {
-            "en": "hogehoge",
+            "en": "Landslide",
             "ja": "土砂崩れ"
           },
           "pages": [
@@ -189,10 +239,14 @@
               "type": "page",
               "text": {
                 "en": [
-                  "foobar"
+                  "Vibrations from earthquakes can cause earth movement on the surface of mountains, resulting in landslides that can cause serious damage to people and buildings. Landslides, in which gentle slopes slide down over a wide area, can also occur as a result of earthquakes.",
+                  "\n",
+                  "It is advisable to check the risk level of the city where you live in advance, as it is possible to estimate the risk level of these landslides based on the geology and topography of the area."
                 ],
                 "ja": [
-                  "地震の振動によって山肌などで土砂の移動が生じ、土砂崩れとなって人や建物におおきな被害をもたらすこともあります。また、広範囲にわたって緩やかな斜面が滑り落ちる地滑りなども地震の影響として生じることがあります。\n      これらの土砂災害についてはその地域の地質や地形などからあらかじめ危険度を推定しておくことができるので、あらかじめ自分の暮らす街の危険度を確認しておくと良いでしょう。"
+                  "地震の振動によって山肌などで土砂の移動が生じ、土砂崩れとなって人や建物におおきな被害をもたらすこともあります。また、広範囲にわたって緩やかな斜面が滑り落ちる地滑りなども地震の影響として生じることがあります。",
+                  "\n",
+                  "これらの土砂災害についてはその地域の地質や地形などからあらかじめ危険度を推定しておくことができるので、あらかじめ自分の暮らす街の危険度を確認しておくと良いでしょう。"
                 ]
               },
               "media": {
@@ -204,10 +258,14 @@
               "type": "page",
               "text": {
                 "en": [
-                  "hogehoge"
+                  "The first priority should be to escape toward a low-risk evacuation site. However, depending on the conditions outside, taking evacuation action may actually increase the danger.",
+                  "\n",
+                  "In such cases, it is advisable to evacuate vertically to a higher floor of the building where you are currently located."
                 ],
                 "ja": [
-                  "まずは比較的危険度の低い避難場所に向かって逃げることを最優先にしましょう。しかし、外の状況によっては避難行動を取ることがかえって危険を大きくしてしまう場合もあります。\n          そう言った場合には現在いる建物のより高いフロアへ避難する垂直避難をすると良いでしょう。"
+                  "まずは比較的危険度の低い避難場所に向かって逃げることを最優先にしましょう。しかし、外の状況によっては避難行動を取ることがかえって危険を大きくしてしまう場合もあります。",
+                  "\n",
+                  "そう言った場合には現在いる建物のより高いフロアへ避難する垂直避難をすると良いでしょう。"
                 ]
               }
             }
@@ -215,7 +273,7 @@
           "summary": [
             {
               "en": [
-                "英語のまとめ"
+                "If it is dangerous to evacuate from the house, evacuate to a higher floor"
               ],
               "ja": [
                 "家から逃げることが危険な場合にはより高いフロアへ避難すると良い"
@@ -225,7 +283,7 @@
         },
         {
           "title": {
-            "en": "hogehoge",
+            "en": "Liquefaction",
             "ja": "液状化現象"
           },
           "pages": [
@@ -233,10 +291,18 @@
               "type": "page",
               "text": {
                 "en": [
-                  "foobar"
+                  "Liquefaction, in which the stratum itself becomes liquid, can occur when strong seismic motion is applied to loosely deposited sandy soil due to an earthquake.",
+                  "\n",
+                  "Liquefaction often occurs in reclaimed land, and other areas with a high groundwater table and loose sand deposits. It should be noted that liquefaction can occur not only along the coast, but also in inland areas if certain conditions are met.",
+                  "\n",
+                  "When liquefaction occurs, buildings lose their support, buildings and bridges sink, and underground construction pipes and manholes rise to the surface"
                 ],
                 "ja": [
-                  "地震によってゆるく堆積した砂の地盤に強い地震動が加わることによって地層自体が液体状になる液状化現象が発生することがあります。\n      液状化は埋立地や干拓地などの地下の水位が高く砂が緩く堆積した地域でよく発生します。海沿いだけでなく、一定の条件を満たすことで内陸の地域でも起こることがあるので注意しなければなりません。\n      液状化が生じると建物を支える力が失われてしまい、建物や橋梁は沈み、地下にある建設管やマンホールは浮かび上がってきます。"
+                  "地震によってゆるく堆積した砂の地盤に強い地震動が加わることによって地層自体が液体状になる液状化現象が発生することがあります。",
+                  "\n",
+                  "液状化は埋立地や干拓地などの地下の水位が高く砂が緩く堆積した地域でよく発生します。海沿いだけでなく、一定の条件を満たすことで内陸の地域でも起こることがあるので注意しなければなりません。",
+                  "\n",
+                  "液状化が生じると建物を支える力が失われてしまい、建物や橋梁は沈み、地下にある建設管やマンホールは浮かび上がってきます。"
                 ]
               }
             },
@@ -244,7 +310,7 @@
               "type": "page",
               "text": {
                 "en": [
-                  "hogehoge"
+                  "Once liquefaction occurs, there is nothing we can do about it. Therefore, we have to research the possibility of liquefaction in advance and to build a house in a way that is resistant to liquefaction"
                 ],
                 "ja": [
                   "液状化現象が起こってしまうと私たち人間の力ではどうすることもできません。そのため、事前の対策として液状化の起こりやすさを事前に調べておいたり、家を立てる時に液状化に強い形で立てると良いでしょう。"
@@ -255,7 +321,7 @@
           "summary": [
             {
               "en": [
-                "英語のまとめ"
+                "Make sure to find out in advance how easy to occur liquefaction in your area"
               ],
               "ja": [
                 "自分が暮らしている土地の液状化の起こりやすさを事前に調べておくと良い"
@@ -265,7 +331,7 @@
         },
         {
           "title": {
-            "en": "hogehoge",
+            "en": "Earthquake Early Warning",
             "ja": "緊急地震速報とは"
           },
           "pages": [
@@ -273,21 +339,18 @@
               "type": "page",
               "text": {
                 "en": [
-                  "foobar"
+                  "Earthquake Early Warning is information that predicts the arrival time and depth of shaking in each area immediately after an earthquake occurs, and notifies the public as quickly as possible.",
+                  "\n",
+                  "Earthquake Early Warning plays an sound like this one (youtube1) to let you know that an earthquake is about to hit.",
+                  "\n",
+                  "The problem with Earthquake Early Warning is that the time between the announcement of the Earthquake Early Warning and the arrival of the earthquake is short, ranging from a few seconds to several tens of seconds, and sometimes the Early Warning does not arrive in time when the earthquake is close to the epicenter, or the predicted seismic intensity is in error."
                 ],
                 "ja": [
-                  "緊急地震速報とは地震が発生した直後に各地での揺れの到達時刻や深度を予想し、可能な限り素早く知らせる情報のことです。\n      緊急地震速報はこのような音声(youtube1)が流れ、地震が到達することを知らせてくれます。\n      緊急地震速報の問題点として緊急地震速報を発表してから地震が到達するまでの時間は数秒から数十秒と短く、震源に近いところでは速報が間に合わないことがあったり、予測された震度に誤差があったりします。"
-                ]
-              }
-            },
-            {
-              "type": "page",
-              "text": {
-                "en": [
-                  "hogehoge"
-                ],
-                "ja": [
-                  "緊急地震速報とは地震が発生した直後に各地での揺れの到達時刻や深度を予想し、可能な限り素早く知らせる情報のことです。\n        緊急地震速報はこのような音声が流れ、地震が到達することを知らせてくれます。\n        緊急地震速報の問題点として緊急地震速報を発表してから地震が到達するまでの時間は数秒から数十秒と短く、震源に近いところでは速報が間に合わないことがあったり、予測された震度に誤差があったりします。"
+                  "緊急地震速報とは地震が発生した直後に各地での揺れの到達時刻や深度を予想し、可能な限り素早く知らせる情報のことです。",
+                  "\n",
+                  "緊急地震速報はこのような音声(youtube1)が流れ、地震が到達することを知らせてくれます。",
+                  "\n",
+                  "緊急地震速報の問題点として緊急地震速報を発表してから地震が到達するまでの時間は数秒から数十秒と短く、震源に近いところでは速報が間に合わないことがあったり、予測された震度に誤差があったりします。"
                 ]
               },
               "media": {
@@ -299,7 +362,7 @@
           "summary": [
             {
               "en": [
-                "英語のまとめ"
+                "Make sure to remember the sound of the Earthquake Early Warning"
               ],
               "ja": [
                 "緊急地震速報の音声はしっかりと確認しておこう"
