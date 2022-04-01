@@ -40,6 +40,57 @@
       </en>
     </text>
    </page>
+   <quiz>
+    <question>
+      <ja>地震によって起こる被害としてて間違っているものはどれでしょう</ja>
+      <en>hogehoge</en>
+    </question>
+    <select>
+      <option> 
+       <label> 
+        <ja>津波</ja>
+        <en>hogehoge</en>
+       </label>
+       <comment>
+        <ja>津波は地震によって起こる被害です。
+        </ja>
+        <en>hogehoge</en>
+       </comment>
+      </option>
+      <option correct="true"> 
+       <label> 
+        <ja>鉄砲水</ja>
+        <en>hogehoge</en>
+       </label> 
+       <comment>
+        <ja>鉄砲水は大雨によって引き起こされるので間違いです。</ja>
+        <en>hogehoge </en>
+       </comment>
+      </option>
+      <option> 
+       <label> 
+        <ja>土砂災害</ja>
+        <en>hogehoge</en>
+       </label>
+       <comment>
+        <ja>土砂災害は地震によって起こる被害です。
+        </ja>
+        <en>hogehoge</en>
+       </comment>
+      </option> 
+      <option> 
+       <label> 
+        <ja>液状化現象</ja>
+        <en>hogehoge</en>
+       </label>
+       <comment>
+        <ja>液状化現象は地震によって起こる被害です。
+        </ja>
+        <en>hogehoge</en>
+       </comment>
+      </option>
+    </select>
+   </quiz>
    <summary>
      <item><ja>地震によって起こる被害には津波・建物への被害・土砂崩れ・液状化現象などがある</ja><en>Damage caused by earthquakes include tsunamis, damage to buildings, landslides, and liquefaction.</en></item>
    </summary>
@@ -104,6 +155,7 @@
       Also, even if the building itself appears to be safe, the shaking may cause damage to the building and furniture.<br/>
      </en>
     </text>
+    <youtube videoid="mk68bZ701s0"/>
    </page>
    <page>
     <text>
@@ -182,6 +234,7 @@
       When liquefaction occurs, buildings lose their support, buildings and bridges sink, and underground construction pipes and manholes rise to the surface
      </en>
     </text>
+    <youtube videoid="fjMExiccfV4"/>
    </page>
    <page>
     <text>
