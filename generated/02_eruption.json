@@ -1,0 +1,52 @@
+[
+  {
+    "meta": {
+      "source": "./articles/02_eruption.xml"
+    },
+    "course": {
+      "title": {
+        "en": "Eruption",
+        "ja": "噴火"
+      },
+      "description": {
+        "en": "About eruption",
+        "ja": "噴火について"
+      },
+      "lessons": [
+        {
+          "title": {
+            "en": "What's Earthquake?",
+            "ja": "噴火とは"
+          },
+          "pages": [
+            {
+              "type": "page",
+              "text": {
+                "en": [
+                  "foobar"
+                ],
+                "ja": [
+                  "日本にはたくさんの活火山が存在し、それらの火山の噴火は時に私たちの生活に大きな被害をもたらすことがあります。\n      今回は火山の噴火とそれによってもたらされる被害について学習していきましょう。"
+                ]
+              },
+              "media": {
+                "type": "youtube",
+                "videoid": "zXA9RCmZJCY"
+              }
+            }
+          ],
+          "summary": [
+            {
+              "en": [
+                "英語のまとめ"
+              ],
+              "ja": [
+                "日本は火山がたくさんあるのでそれらの噴火に備えることが必要"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
