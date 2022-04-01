@@ -20,10 +20,11 @@
       台風は、夏から秋にかけて発生する気象現象です。<br/>
       台風〇〇号というように、年に複数回発生し、大雨や強風を伴って洪水、土砂崩れなどを引き起こします。<br/>
       過去に日本では、伊勢湾台風や枕崎台風など死者が3000人を超えるものもありました。<br/>
-
      </ja>
      <en>
-      hogehoge
+      Typhoons are weather phenomena that occur from summer to autumn.<br/>
+      Typhoon No. 00, as it is called, occurs multiple times a year and causes flooding and landslides with heavy rain and strong winds.<br/>
+      In the past, Japan has experienced typhoons such as Isewan Typhoon and Makurazaki Typhoon, which killed more than 3,000 people.<br/>
      </en>
     </text>
    </page>
@@ -31,36 +32,36 @@
     <text>
       <ja>
         気象予報で台風の発生がわかった場合、屋外にあるものは安全な場所に避難させましょう。<br/>
-        物が飛んで来て窓ガラスが割れることを防ぐため、窓に雨戸やシャッターがあれば下ろしましょう。窓の鍵を閉め、カーテンも閉めましょう。窓ガラスに養生テープや飛散防止フィルムを貼ることもできます。飛来物でガラスが割れることは防げませんが、もし割れた際に室内に破片が飛び散るリスクを抑えることができます。
+        物が飛んで来て窓ガラスが割れることを防ぐため、窓に雨戸やシャッターがあれば下ろしましょう。窓の鍵を閉め、カーテンも閉めましょう。窓ガラスに養生テープや飛散防止フィルムを貼ることもできます。飛来物でガラスが割れることは防げませんが、もし割れた際に室内に破片が飛び散るリスクを抑えることができます。<br/>
       </ja>
       <en>
-        hogehoge
+        If the weather forecast indicates a typhoon is on the way, evacuate outdoor items to a safe place.<br/>
+        To prevent objects from flying in and breaking window panes, lower storm shutters or shutters on windows, if available. Lock windows and close curtains. You can also apply masking tape or anti-scattering film to the window glass. While this will not prevent glass from being broken by flying debris, it will reduce the risk of shards flying into the room if it does break.<br/>
       </en>
     </text>
    </page>
    <summary>
-     <item><ja>台風は年に複数回発生し、洪水や土砂崩れなどをひきおこす</ja><en>hogehoge</en></item>
-     <item><ja>台風の発生がわかったら事前に対策しておく必要がある</ja><en>hogehoge</en></item>
+     <item><ja>台風は年に複数回発生し、洪水や土砂崩れなどをひきおこす</ja><en>Typhoons occur multiple times a year, causing flooding and landslides.</en></item>
+     <item><ja>台風の発生がわかったら事前に対策しておく必要がある</ja><en>If a typhoon is known to be on the way, we need to take precautions in advance.</en></item>
    </summary>
   
   </lesson>
 <!-- 2個目のlesson -->
   <lesson>
    <title>
-    <ja> 洪水とは</ja> 
-    <en> hogehoge</en>
+    <ja>洪水とは</ja> 
+    <en>What's flood?</en>
    </title>
 
    <page>
     <text>
      <ja>
       洪水とは、台風や豪雨、雪解け水によって河川の水量が急激に増すことです。河川から水が溢れなくても洪水と呼びますが、溢れた場合は「はん濫」と呼びます。<br/>
-      台風などの豪雨によって洪水が発生すると、家屋が流されたり、道路が利用できなくなったりします。
-
-
+      台風などの豪雨によって洪水が発生すると、家屋が流されたり、道路が利用できなくなったりします。<br/>
      </ja>
      <en>
-      hogehoge
+      A flood is a sudden increase in the volume of water in a river caused by a typhoon, heavy rains, or melting snow. Even if a river does not overflow, it is still called a flood, but if it does, it is called a "Hanran"(in Japanese).<br/>
+      When typhoons and other torrential rains cause flooding, houses are washed away and roads become unusable.<br/>
      </en>
     </text>
    </page>
@@ -68,41 +69,40 @@
     <text>
       <ja>
         洪水が起きたら以下のことに注意しましょう<br/>
-
-        ラジオ・テレビで最新の気象・災害情報に注意し、危険を感じたら避難準備をしましょう。<br/>
-
-        避難する前に、ガス、電気、火種を消し、避難場所を確認。万一途中で家族が離ればなれになったときの集合場所を決めておきましょう。
-
+        テレビ・ネットで最新の気象・災害情報に注意し、危険を感じたら避難準備をしましょう。<br/>
+        避難する前に、ガス、電気、火種を消し、避難場所を確認。万一途中で家族が離ればなれになったときの集合場所を決めておきましょう。<br/>
       </ja>
       <en>
-        hogehoge
+        If flooding occurs, be aware of the following<br/>
+        Pay attention to the latest weather and disaster information on the TV and internet, and be prepared to evacuate if you feel danger.<br/>
+        Before evacuating, turn off gas, electricity, and fire sources, and check the evacuation place. Decide on a meeting place in case your family members become separated during the process.<br/>
       </en>
     </text>
    </page>
    <summary>
-     <item><ja>洪水が起こったら最新の情報を入手し、迅速に避難ができるよう準備をしておくと良い</ja><en>hogehoge</en></item>
+     <item><ja>洪水が起こったら最新の情報を入手し、迅速に避難ができるよう準備をしておくと良い</ja><en>If flooding occurs, you should be up-to-date on the latest information and prepared to evacuate quickly.</en></item>
    </summary>
   
   </lesson>
   <lesson>
    <title>
-    <ja> 高潮とは</ja> 
-    <en> hogehoge</en>
+    <ja> 高潮とは</ja>
+    <en> What's storm surge</en>
    </title>
 
    <page>
     <text>
      <ja>
-      高潮は、台風などの影響により、気圧が低下し海面が吸い上げられたり、強風により海面が吹き寄せられるなどして、海面の水位が普段よりも上昇する現象のことです。その結果、河口の水位が高くなり、河口付近の低地に浸水被害をもたらします。
-
+      高潮は、台風などの影響により、気圧が低下し海面が吸い上げられたり、強風により海面が吹き寄せられるなどして、海面の水位が普段よりも上昇する現象のことです。その結果、河口の水位が高くなり、河口付近の低地に浸水被害をもたらします。<br/>
      </ja>
      <en>
-      hogehoge
+      A storm surge is a phenomenon in which the sea level rises above normal due to a drop in atmospheric pressure caused by a typhoon or strong winds that suck up the sea surface. As a result, the water level at the mouth of the river rises, causing inundation damage to low-lying areas near the mouth.<br/>
      </en>
     </text>
+    <youtube videoid="Glofj3RMUbs"/>
    </page>
    <summary>
-     <item><ja>台風によって高潮が起こることもあるのでそうした場合には海にも注意しなければならない</ja><en>hogehoge</en></item>
+     <item><ja>台風によって高潮が起こることもあるのでそうした場合には海にも注意しなければならない</ja><en>Typhoons can cause storm surges, so we must be careful of the ocean in such cases.</en></item>
    </summary>
   
   </lesson>
