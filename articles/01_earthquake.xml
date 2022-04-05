@@ -43,50 +43,50 @@
    <quiz>
     <question>
       <ja>地震によって起こる被害としてて間違っているものはどれでしょう</ja>
-      <en>hogehoge</en>
+      <en>Which of the following is not true about the damage caused by earthquakes?</en>
     </question>
     <select>
       <option> 
        <label> 
         <ja>津波</ja>
-        <en>hogehoge</en>
+        <en>Tsunami</en>
        </label>
        <comment>
         <ja>津波は地震によって起こる被害です。
         </ja>
-        <en>hogehoge</en>
+        <en>Tsunamis are damage caused by earthquakes.</en>
        </comment>
       </option>
       <option correct="true"> 
        <label> 
         <ja>鉄砲水</ja>
-        <en>hogehoge</en>
+        <en>Flash flood</en>
        </label> 
        <comment>
         <ja>鉄砲水は大雨によって引き起こされるので間違いです。</ja>
-        <en>hogehoge </en>
+        <en>Flash flood are damage caused by earthquakes.</en>
        </comment>
       </option>
       <option> 
        <label> 
         <ja>土砂災害</ja>
-        <en>hogehoge</en>
+        <en>Sediment disaster</en>
        </label>
        <comment>
         <ja>土砂災害は地震によって起こる被害です。
         </ja>
-        <en>hogehoge</en>
+        <en>Sediment disaster are damage caused by earthquakes.</en>
        </comment>
       </option> 
       <option> 
        <label> 
         <ja>液状化現象</ja>
-        <en>hogehoge</en>
+        <en>Liquefaction</en>
        </label>
        <comment>
         <ja>液状化現象は地震によって起こる被害です。
         </ja>
-        <en>hogehoge</en>
+        <en>Liquefaction are damage caused by earthquakes.</en>
        </comment>
       </option>
     </select>
