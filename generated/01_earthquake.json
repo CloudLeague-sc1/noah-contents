@@ -118,7 +118,7 @@
               "quiz_type": "multiple_choice",
               "question": {
                 "en": [
-                  "hogehoge"
+                  "Which of the following is not true about the damage caused by earthquakes?"
                 ],
                 "ja": [
                   "地震によって起こる被害としてて間違っているものはどれでしょう"
@@ -128,12 +128,12 @@
                 {
                   "correct": false,
                   "label": {
-                    "en": "hogehoge",
+                    "en": "Tsunami",
                     "ja": "津波"
                   },
                   "comment": {
                     "en": [
-                      "hogehoge"
+                      "Tsunamis are damage caused by earthquakes."
                     ],
                     "ja": [
                       "津波は地震によって起こる被害です。"
@@ -143,12 +143,12 @@
                 {
                   "correct": true,
                   "label": {
-                    "en": "hogehoge",
+                    "en": "Flash flood",
                     "ja": "鉄砲水"
                   },
                   "comment": {
                     "en": [
-                      "hogehoge"
+                      "Flash flood are damage caused by earthquakes."
                     ],
                     "ja": [
                       "鉄砲水は大雨によって引き起こされるので間違いです。"
@@ -158,12 +158,12 @@
                 {
                   "correct": false,
                   "label": {
-                    "en": "hogehoge",
+                    "en": "Sediment disaster",
                     "ja": "土砂災害"
                   },
                   "comment": {
                     "en": [
-                      "hogehoge"
+                      "Sediment disaster are damage caused by earthquakes."
                     ],
                     "ja": [
                       "土砂災害は地震によって起こる被害です。"
@@ -173,12 +173,12 @@
                 {
                   "correct": false,
                   "label": {
-                    "en": "hogehoge",
+                    "en": "Liquefaction",
                     "ja": "液状化現象"
                   },
                   "comment": {
                     "en": [
-                      "hogehoge"
+                      "Liquefaction are damage caused by earthquakes."
                     ],
                     "ja": [
                       "液状化現象は地震によって起こる被害です。"
